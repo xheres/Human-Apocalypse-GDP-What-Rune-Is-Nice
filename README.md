@@ -1,2 +1,2 @@
-# Human-Apocalypse-GDP-What-Rune-Is-Nice
-GDP
+# Human Apocalypse
+- For GDP -
