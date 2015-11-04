@@ -8,14 +8,7 @@ public class PlayerController : MonoBehaviour
 		  MAX_Y = 0.0f;
 	Vector2 endPoint;
 	bool flag = false;
-
-	// Use this for initialization
-	void Start () 
-	{
-
-	}
 	
-	// Update is called once per frame
 	void Update () 
 	{
 		if (Input.GetMouseButton(0)) 
@@ -26,7 +19,6 @@ public class PlayerController : MonoBehaviour
 			{
 				flag = true;
 				endPoint = hit.point;
-				Debug.Log (endPoint);
 			}
 
 			if (flag && !Mathf.Approximately (transform.position.magnitude, endPoint.magnitude))

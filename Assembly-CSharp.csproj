@@ -6,7 +6,7 @@
 	<ProductVersion>10.0.20506</ProductVersion>
 	<SchemaVersion>2.0</SchemaVersion>
 	<RootNamespace></RootNamespace>
-	<ProjectGuid>{3D4112E0-3E0E-4F0A-B086-D41863864829}</ProjectGuid>
+	<ProjectGuid>{5FA64080-DE40-4BA0-229F-2524ADEDDA02}</ProjectGuid>
 	<OutputType>Library</OutputType>
 	<AppDesignerFolder>Properties</AppDesignerFolder>
 	<AssemblyName>Assembly-CSharp</AssemblyName>
@@ -45,7 +45,11 @@
 	</Reference>
   </ItemGroup>
   <ItemGroup>
+     <Compile Include="Assets\scripts\EnemyCreateMuzzle.cs" />
+     <Compile Include="Assets\scripts\EnemyProperties.cs" />
      <Compile Include="Assets\scripts\PlayerController.cs" />
+     <Compile Include="Assets\scripts\enemy_muzzletypes\muzzle_aimed.cs" />
+     <Compile Include="Assets\scripts\projectiles\small_whitered_aimed.cs" />
  <Reference Include="UnityEngine.UI">
  <HintPath>D:/Unity/Editor/Data/UnityExtensions/Unity/GUISystem/UnityEngine.UI.dll</HintPath>
  </Reference>
