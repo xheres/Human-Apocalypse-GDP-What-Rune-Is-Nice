@@ -10,10 +10,8 @@ public class EnemyCreateMuzzle : MonoBehaviour
 
     public void deleteMuzzle() { muzzleDeleted = true; }
 
-
 	void Update() 
     {
-        Debug.Log(muzzleDeleted);
 	    if (!isSpawning() && !isExiting() && muzzleDeleted)
         {
             Invoke("CreateMuzzle", reloadTime);
@@ -31,7 +29,6 @@ public class EnemyCreateMuzzle : MonoBehaviour
     {
         if (GetComponent<EnemyProperties>().maxAmmo <= 0 && GetComponent<EnemyProperties>().maxAmmo != -1) // Exit when enemy runs out of bullet
         {
-            Debug.Log("Exiting");
             return true;
         }
         return false;      
@@ -41,7 +38,6 @@ public class EnemyCreateMuzzle : MonoBehaviour
     {
         if (gameObject.transform.position.y > GetComponent<EnemyProperties>().spawnedYPos)
         {
-            Debug.Log("Spawning");
             return true;
         }
         return false;
