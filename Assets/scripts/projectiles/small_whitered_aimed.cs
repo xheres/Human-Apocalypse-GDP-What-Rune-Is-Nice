@@ -22,7 +22,7 @@ public class small_whitered_aimed : MonoBehaviour
 
     void Update()
     {
-        if (transform.position.y < -4)
+        if (transform.position.y < -4 || transform.position.x > 5 || transform.position.x < -5)
             Destroy(gameObject);
     }
 
