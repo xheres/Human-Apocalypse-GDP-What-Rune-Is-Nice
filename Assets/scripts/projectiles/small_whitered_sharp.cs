@@ -4,12 +4,6 @@ using System.Collections;
 public class small_whitered_sharp : MonoBehaviour
 {
     public float speed = 1;
-    Rigidbody2D rb;
-    void Start()
-    {
-        rb = GetComponent<Rigidbody2D>();
-            
-    }
 
     void Update()
     {

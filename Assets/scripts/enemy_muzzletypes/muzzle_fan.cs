@@ -11,10 +11,6 @@ public class muzzle_fan : MonoBehaviour
     private bool shotFired = false;
     private bool leftSweep = false;
     private bool rightSweep = false;
-	void Start () 
-    {
-	
-	}
 	
 	// Update is called once per frame
 	void Update () 
@@ -41,7 +37,7 @@ public class muzzle_fan : MonoBehaviour
     {
         Instantiate(projectile, transform.position, Quaternion.Euler(0,0,zRotation));
         if (GetComponentInParent<EnemyProperties>().maxAmmo != -1)
-            GetComponentInParent<EnemyProperties>().UseAmmo();
+        GetComponentInParent<EnemyProperties>().UseAmmo();
         shotsPerRound -= 1;
         shotFired = false;  
     }
