@@ -7,7 +7,7 @@ public class muzzle_fan : MonoBehaviour
     public int shotsPerRound;
     public float interval;
 
-    private float zRotation = -50;
+    private float zRotation = -60;
     private bool shotFired = false;
     private bool leftSweep = false;
     private bool rightSweep = false;
@@ -45,13 +45,13 @@ public class muzzle_fan : MonoBehaviour
     void changeRotation()
     {
 
-        if (zRotation >= 50)
+        if (zRotation >= 60)
         {
             rightSweep = false;
             leftSweep = true;
         }
 
-        if (zRotation <= -50)
+        if (zRotation <= -60)
         {
             leftSweep = false;
             rightSweep = true;
