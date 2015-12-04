@@ -3,12 +3,16 @@ using System.Collections;
 
 public class EnemyCreateMuzzle : MonoBehaviour 
 {
-
-    public float reloadTime;
-
+    [SerializeField]private float reloadTime = 5f;
     private bool muzzleDeleted = true;
+    private EnemyProperties enemyProp;
 
     public void deleteMuzzle() { muzzleDeleted = true; }
+
+    void Start()
+    {
+        enemyProp = GetComponent<EnemyProperties>();
+    }
 
 	void Update() 
     {
@@ -21,13 +25,13 @@ public class EnemyCreateMuzzle : MonoBehaviour
 
     void CreateMuzzle()
     {
-        GameObject newMuzzle = (GameObject)Instantiate(GetComponent<EnemyProperties>().muzzle, transform.position, Quaternion.identity);
-        newMuzzle.transform.parent = gameObject.transform;
+        GameObject newMuzzle = Instantiate(enemyProp.getMuzzle(), transform.position, Quaternion.identity) as GameObject;
+        newMuzzle.transform.parent = transform;
     }
 
     bool isExiting()
     {
-        if (GetComponent<EnemyProperties>().maxAmmo <= 0 && GetComponent<EnemyProperties>().maxAmmo != -1) // Exit when enemy runs out of bullet
+        if (enemyProp.getAmmo() <= 0 && enemyProp.getAmmo() != -1) // Exit when enemy runs out of bullet (-1 is for debugging)
         {
             return true;
         }
@@ -36,7 +40,7 @@ public class EnemyCreateMuzzle : MonoBehaviour
 
     bool isSpawning() // Is enemy in position?
     {
-        if (gameObject.transform.position.y > GetComponent<EnemyProperties>().spawnedYPos)
+        if (transform.position.y > enemyProp.getSpawnedYPos() + 1f)
         {
             return true;
         }

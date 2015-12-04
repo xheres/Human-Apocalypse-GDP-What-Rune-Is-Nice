@@ -3,7 +3,7 @@ using System.Collections;
 
 public class small_whitered_sharp : MonoBehaviour
 {
-    public float speed = 1;
+    [SerializeField]private float speed = 1;
 
     void Update()
     {

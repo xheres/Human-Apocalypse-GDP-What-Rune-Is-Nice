@@ -3,20 +3,24 @@ using System.Collections;
 
 public class muzzle_fan : MonoBehaviour 
 {
-    public GameObject projectile;
-    public int shotsPerRound;
-    public float interval;
+    [SerializeField]private GameObject projectile;
+    [SerializeField]private int shotsPerRound = 30;
+    [SerializeField]private float interval = 0.2f;
 
     private float zRotation = -60;
     private bool shotFired = false;
     private bool leftSweep = false;
     private bool rightSweep = false;
-	
-	// Update is called once per frame
+
+    private EnemyProperties enemyProp;
+
+	void Start()
+    {
+        enemyProp = GetComponentInParent<EnemyProperties>();
+    }
 	void Update () 
     {
-
-        if (GetComponentInParent<EnemyProperties>().maxAmmo != 0)
+        if (enemyProp.getAmmo() <= 0 || enemyProp.getAmmo() == -1)
         {
             if (shotsPerRound != 0 && !shotFired)
             {
@@ -36,8 +40,8 @@ public class muzzle_fan : MonoBehaviour
     void createProjectile()
     {
         Instantiate(projectile, transform.position, Quaternion.Euler(0,0,zRotation));
-        if (GetComponentInParent<EnemyProperties>().maxAmmo != -1)
-        GetComponentInParent<EnemyProperties>().UseAmmo();
+        if (enemyProp.getAmmo() != -1)
+            enemyProp.UseAmmo();
         shotsPerRound -= 1;
         shotFired = false;  
     }

@@ -3,14 +3,20 @@ using System.Collections;
 
 public class muzzle_aimed : MonoBehaviour 
 {
-    public GameObject projectile;
-    public int shotsPerRound;
-    public float interval;
+    [SerializeField]private GameObject projectile;
+    [SerializeField]private int shotsPerRound;
+    [SerializeField]private float interval;
+    private EnemyProperties enemyProp;
 
     private bool shotFired = false;
+
+    void Start()
+    {
+        enemyProp = GetComponentInParent<EnemyProperties>();
+    }
 	void Update () 
     {
-        if (GetComponentInParent<EnemyProperties>().maxAmmo != 0)
+        if (enemyProp.getAmmo() != 0)
         {
             if (shotsPerRound != 0 && !shotFired)
             {
@@ -28,9 +34,11 @@ public class muzzle_aimed : MonoBehaviour
     void createProjectile()
     {
         Instantiate(projectile, transform.position, Quaternion.identity);
-        if (GetComponentInParent<EnemyProperties>().maxAmmo != -1)
-            GetComponentInParent<EnemyProperties>().UseAmmo();
+        if (enemyProp.getAmmo() != -1)
+            enemyProp.UseAmmo();
         shotsPerRound -= 1;
-        shotFired = false;        
+        shotFired = false;
+
+        Debug.Log("Created");
     }
 }
