@@ -36,7 +36,8 @@ public enum eBossState
         m_StateMove = new BossStateMove(this);
     }
 	// Update is called once per frame
-	void Update () {
+	void Update () 
+    {
 	
 	}
 }
