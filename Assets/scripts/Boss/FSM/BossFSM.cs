@@ -7,7 +7,7 @@ public class BossFSM : MonoBehaviour {
     EnemyProperties enemyProp;
     int nAmmo;
     bool changedMove = false;
-[SerializeField] enum eBossState
+public enum eBossState
     {
         Spawn,
         CreateMuzzle,
