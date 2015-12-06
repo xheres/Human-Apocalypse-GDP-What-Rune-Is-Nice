@@ -1,27 +1,32 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-public class SatelliteFSM : MonoBehaviour {
+public class SatelliteFSM : MonoBehaviour 
+{
+    SatelliteState currentState;
 
-    public enum eSatelliteState
+    float yPos = 25.0f;
+
+    public void ChangeState(SatelliteState state)
     {
-        Spawn,
-        StartCooldown,
-        CreateMuzzle,
-        Warning,
-        Fire,
-        Standby
+        currentState = state;
     }
 
-    SatelliteState m_Spawn;
-    SatelliteState m_StartCooldown;
-    SatelliteState CreateMuzzle;
-    SatelliteState Warning;
-    SatelliteState Fire;
-    SatelliteState Standby;
-
-    void Start ()
+    void Start()
     {
-        //m_StateSpawn = new BossStateSpawn(this);
+        currentState = new SatelliteStateSpawn(this);
+    }
+
+    void Update()
+    {
+        // if player on boss stage (needs to run getter from another script)
+            // change currentState to m_Standby
+
+        currentState.Enter();
+    }
+
+    public float getYPos()
+    {
+        return yPos;
     }
 }
