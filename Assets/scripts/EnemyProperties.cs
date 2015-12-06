@@ -13,4 +13,5 @@ public class EnemyProperties : MonoBehaviour
     public int getAmmo() { return maxAmmo;  }
     public float getSpawnedYPos() { return spawnedYPos; }
     public GameObject getMuzzle() { return muzzle;  }
+    public void setMuzzle(GameObject Muzzle) {muzzle = Muzzle;}
     }
