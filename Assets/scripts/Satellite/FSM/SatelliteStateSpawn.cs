@@ -1,4 +1,4 @@
-﻿// Do I even need the satellite to spawn? (Considering it will always be in the game from the start)
+﻿// Done by 1406990J | Aaron Tan | P01 
 
 using UnityEngine;
 using System.Collections;

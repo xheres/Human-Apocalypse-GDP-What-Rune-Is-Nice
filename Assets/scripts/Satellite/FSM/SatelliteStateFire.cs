@@ -1,4 +1,6 @@
-﻿using UnityEngine;
+﻿// Done by 1406990J | Aaron Tan | P01 
+
+using UnityEngine;
 using System.Collections;
 
 public class SatelliteStateFire : SatelliteState
