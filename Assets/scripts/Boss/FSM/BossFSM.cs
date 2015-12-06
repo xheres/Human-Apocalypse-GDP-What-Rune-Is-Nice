@@ -1,8 +1,9 @@
-﻿using UnityEngine;
+﻿//Matric Number: 1401169f, Name: Calvin, Class: P01
+using UnityEngine;
 using System.Collections;
 
 public class BossFSM : MonoBehaviour {
-
+    //initialize variables
     GameObject Boss;
     EnemyProperties enemyProp;
     int nAmmo;
@@ -45,13 +46,13 @@ public enum eBossState
          ChangeState(eBossState.Spawn);
     }
 	// Update is called once per frame
-	void Update () 
+	void Update () //update states
     {
         m_CurrentState.Enter();
 
 	}
 
-    public eBossState ReturnNextState()
+    public eBossState ReturnNextState() //returns the next state in line
     {
         nAmmo = enemyProp.getAmmo();
         if (m_CurrentState == m_StateSpawn)
@@ -59,6 +60,10 @@ public enum eBossState
             return eBossState.CreateMuzzle;
         }
         if (m_CurrentState == m_StateCreateMuzzle)
+        {
+            return eBossState.Move;
+        }
+        if (m_CurrentState == m_StateMove)
         {
             return eBossState.Attack;
         }
@@ -73,10 +78,14 @@ public enum eBossState
                 return eBossState.Retreat;
             }
         }
+        if (m_CurrentState == m_StateDeleteMuzzle)
+        {
+            return eBossState.CreateMuzzle;
+        }
         return eBossState.DeleteEntity;
     }
 
-    public void ChangeState (eBossState _newState)
+    public void ChangeState (eBossState _newState) //change the current state to the selected state
     {
         switch (_newState)
         {
@@ -86,25 +95,8 @@ public enum eBossState
             case eBossState.Attack: m_CurrentState = m_StateAttack; break;
             case eBossState.Retreat: m_CurrentState = m_StateRetreat; break;
             case eBossState.DeleteEntity: m_CurrentState = m_StateDeleteEntity; break;
+            case eBossState.Move: m_CurrentState = m_StateMove; break;
         }
         m_CurrentState.Enter();
-    }
-
-    public void  MoveChangeState ()
-    {
-        if (changedMove == false)
-        {
-            
-            m_LastState = m_CurrentState;
-            m_CurrentState = m_StateMove;
-            changedMove = true;
-            m_CurrentState.Enter();
-        }
-        if (changedMove == true)
-        {
-            m_CurrentState = m_LastState;
-            changedMove = false;
-            m_CurrentState.Enter();
-        }
     }
 }

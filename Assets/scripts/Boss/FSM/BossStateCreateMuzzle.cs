@@ -1,4 +1,5 @@
-﻿using UnityEngine;
+﻿//Matric Number: 1401169f, Name: Calvin, Class: P01
+using UnityEngine;
 using System.Collections;
 
 public class BossStateCreateMuzzle : BossState {
@@ -23,21 +24,23 @@ public class BossStateCreateMuzzle : BossState {
         {
             Boss = GameObject.Find("Boss_1");
             enemyProp = Boss.GetComponent<EnemyProperties>();
+            hasEntered = true;
         }
         Execute();
     }
 
     public override void Execute()
     {
-        int i = Random.Range(0, 3);
+        int i = Random.Range(0, 3); //random a number between 0-2
         chosenMuzzle = muzzles[i];
-        while (chosenMuzzle == prevMuzzle)
+        while (chosenMuzzle == prevMuzzle) //as long as the chosen muzzle is the same as the prev muzzle, do a random between 0-2 again 
         {
-            i = Random.Range(0, 2);
+            i = Random.Range(0, 3); //random a number between 0-2
             chosenMuzzle = muzzles[i];
         }
         enemyProp.setMuzzle(chosenMuzzle);
         Debug.Log("Create the muzzle");
+        Exit();
     }
 
     public override void Exit()
