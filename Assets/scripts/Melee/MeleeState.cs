@@ -1,7 +1,7 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-public abstract class MeleeStates
+public abstract class MeleeState
 {
     protected MeleeFSM m_MeleeFSM;
 

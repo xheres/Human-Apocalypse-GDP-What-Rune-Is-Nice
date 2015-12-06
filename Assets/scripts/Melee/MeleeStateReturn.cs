@@ -23,6 +23,7 @@ public class MeleeStateReturn : MeleeState {
                 // make the entity go back to its original position as it reaches the end of the screen (bottom)
                 nextState = new MeleeStateIdle(m_MeleeFSM);
             }
+            
             goBack = true;
         }
     }
