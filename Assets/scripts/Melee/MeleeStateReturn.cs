@@ -26,6 +26,8 @@ public class MeleeStateReturn : MeleeState {
             
             goBack = true;
         }
+
+        Execute();
     }
 
     public override void Execute()

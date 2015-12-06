@@ -1,15 +1,33 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-public class MeleeStateDeleteEntity : MonoBehaviour {
+public class MeleeStateDeleteEntity : MonoBehaviour
+{
 
-	// Use this for initialization
-	void Start () {
-	
-	}
-	
-	// Update is called once per frame
-	void Update () {
-	
-	}
+    bool delete = false;
+    public MeleeStateDeleteEntity(MeleeFSM _FSM)
+    {
+        m_MeleeFSM = _FSM;
+    }
+
+    void Start()
+    {
+        if (!delete)
+        {
+            delete = true;
+        }
+
+        Execute();
+    }
+
+    public override void Execute()
+    {
+        Exit();
+    }
+
+    public override void Exit()
+    {
+        
+    }
 }
+
