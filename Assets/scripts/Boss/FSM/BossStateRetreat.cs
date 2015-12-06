@@ -17,7 +17,7 @@ public class BossStateRetreat : BossState {
 
     public override void Execute()
     {
-        Debug.Log("Retreat while y Pos not  < 9.2f ");
+        Debug.Log("Retreat while y Pos  < 9.2f ");
         Exit();
     }
 
