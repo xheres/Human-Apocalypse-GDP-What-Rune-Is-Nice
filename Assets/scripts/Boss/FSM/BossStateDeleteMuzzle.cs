@@ -2,7 +2,7 @@
 using System.Collections;
 
 public class BossStateDeleteMuzzle : BossState {
-
+    bool hasEntered = false;
     public BossStateDeleteMuzzle(BossFSM _FSM)
 	{
 		m_BossFSM = _FSM;
@@ -10,7 +10,11 @@ public class BossStateDeleteMuzzle : BossState {
 
     public override void Enter()
     {
-        Execute();
+        if (hasEntered == false)
+        {
+            Execute();
+            hasEntered = true;
+        }
     }
 
     public override void Execute()

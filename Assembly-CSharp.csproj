@@ -49,6 +49,7 @@
      <Compile Include="Assets\scripts\Aimed\AimedState.cs" />
      <Compile Include="Assets\scripts\Aimed\AimedStateAttack.cs" />
      <Compile Include="Assets\scripts\Aimed\AimedStateCreateMuzzle.cs" />
+     <Compile Include="Assets\scripts\Aimed\AimedStateDeleteEntity.cs" />
      <Compile Include="Assets\scripts\Aimed\AimedStateMove.cs" />
      <Compile Include="Assets\scripts\Aimed\AimedStateRetreat.cs" />
      <Compile Include="Assets\scripts\Aimed\AimedStateSpawn.cs" />
@@ -64,6 +65,15 @@
      <Compile Include="Assets\scripts\Debug\DummyMovement.cs" />
      <Compile Include="Assets\scripts\EnemyCreateMuzzle.cs" />
      <Compile Include="Assets\scripts\EnemyProperties.cs" />
+     <Compile Include="Assets\scripts\Melee\MeleeFSM.cs" />
+     <Compile Include="Assets\scripts\Melee\MeleeState.cs" />
+     <Compile Include="Assets\scripts\Melee\MeleeStateAttack.cs" />
+     <Compile Include="Assets\scripts\Melee\MeleeStateDeleteEntity.cs" />
+     <Compile Include="Assets\scripts\Melee\MeleeStateExplode.cs" />
+     <Compile Include="Assets\scripts\Melee\MeleeStateIdle.cs" />
+     <Compile Include="Assets\scripts\Melee\MeleeStateRetreat.cs" />
+     <Compile Include="Assets\scripts\Melee\MeleeStateReturn.cs" />
+     <Compile Include="Assets\scripts\Melee\MeleeStateSpawn.cs" />
      <Compile Include="Assets\scripts\OnSpawn.cs" />
      <Compile Include="Assets\scripts\PlayerController.cs" />
      <Compile Include="Assets\scripts\Satellite\FSM\SatelliteFSM.cs" />
