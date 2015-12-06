@@ -6,8 +6,8 @@ public class BossFSM : MonoBehaviour {
     GameObject Boss;
     EnemyProperties enemyProp;
     int nAmmo;
-
-public enum eBossState
+    bool changedMove = false;
+[SerializeField] enum eBossState
     {
         Spawn,
         CreateMuzzle,
@@ -88,5 +88,23 @@ public enum eBossState
             case eBossState.DeleteEntity: m_CurrentState = m_StateDeleteEntity; break;
         }
         m_CurrentState.Enter();
+    }
+
+    public void  MoveChangeState ()
+    {
+        if (changedMove == false)
+        {
+            
+            m_LastState = m_CurrentState;
+            m_CurrentState = m_StateMove;
+            changedMove = true;
+            m_CurrentState.Enter();
+        }
+        if (changedMove == true)
+        {
+            m_CurrentState = m_LastState;
+            changedMove = false;
+            m_CurrentState.Enter();
+        }
     }
 }

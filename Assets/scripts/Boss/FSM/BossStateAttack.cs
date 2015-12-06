@@ -7,6 +7,7 @@ public class BossStateAttack : BossState {
     int nShotCounter;
     GameObject Boss;
     EnemyProperties enemyProp;
+    int Move;
     
     public BossStateAttack(BossFSM _FSM)
 	{
@@ -21,20 +22,28 @@ public class BossStateAttack : BossState {
             Boss = GameObject.Find("Boss_1");
             enemyProp = Boss.GetComponent<EnemyProperties>();
             int nAmmo = enemyProp.getAmmo();
+            Move = Random.Range(0, 2);
         }
         Execute();
     }
 
     public override void Execute()
     {
-        //shoot based on the muzzle until a certain amount of shots, while reducing maxammo by 1 each time by calling UseAmmo
-        if (nShotCounter <11)
+        if (Move == 0)
         {
-            Debug.Log("Shoot");
-            nShotCounter++;
-            enemyProp.UseAmmo();
+            //shoot based on the muzzle until a certain amount of shots, while reducing maxammo by 1 each time by calling UseAmmo
+            if (nShotCounter < 11)
+            {
+                Debug.Log("Shoot");
+                nShotCounter++;
+                enemyProp.UseAmmo();
+            }
+            else
+            {
+                Exit();
+            }
         }
-        else
+        else if (Move == 1)
         {
             Exit();
         }
@@ -42,6 +51,13 @@ public class BossStateAttack : BossState {
 
     public override void Exit()
     {
-        m_BossFSM.ChangeState(m_BossFSM.ReturnNextState());
+        if (Move == 1)
+        {
+            m_BossFSM.MoveChangeState();
+        }
+        else if (Move == 0)
+        {
+            m_BossFSM.ChangeState(m_BossFSM.ReturnNextState());
+        }
     }
 }

@@ -29,7 +29,7 @@ public class BossStateCreateMuzzle : BossState {
 
     public override void Execute()
     {
-        int i = Random.Range(0, 2);
+        int i = Random.Range(0, 3);
         chosenMuzzle = muzzles[i];
         while (chosenMuzzle == prevMuzzle)
         {
