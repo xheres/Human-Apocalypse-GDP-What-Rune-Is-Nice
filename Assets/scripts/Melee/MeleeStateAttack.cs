@@ -67,7 +67,7 @@ public class MeleeStateAttack : MeleeState {
 
     public override void Exit()
     {
-
+        m_MeleeFSM.ChangeState(nextState);
     }
 
 }
