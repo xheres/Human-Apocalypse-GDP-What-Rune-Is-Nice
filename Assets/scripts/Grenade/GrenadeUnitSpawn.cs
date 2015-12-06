@@ -3,6 +3,8 @@ using System.Collections;
 
 public class GrenadeUnitStateSpawn : GrenadeUnitState {
 	bool hasEntered = false;
+	GrenadeUnitState nextState;
+
 	public GrenadeUnitStateSpawn(GrenadeUnitFSM _FSM)
 	{
 		m_GrenadeUnitFSM = _FSM;

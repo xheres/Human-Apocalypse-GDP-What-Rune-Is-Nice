@@ -6,7 +6,7 @@ public class GrenadeUnitStateAttack : GrenadeUnitState {
 	GrenadeUnitState nextState;
 	GameObject GrenadeUnit;
 	EnemyProperties enemyP;
-	int nAmmo = enemyP.getAmmo();
+	int nAmmo;
 	[SerializeField] GameObject rocket;
 	[SerializeField] GameObject grenade;
 	GameObject currentMuzzle;
@@ -18,6 +18,7 @@ public class GrenadeUnitStateAttack : GrenadeUnitState {
 	
 	public override void Enter()
 	{
+		nAmmo = enemyP.getAmmo();
 		if (hasEntered == false)
 		{
 			GrenadeUnit = GameObject.Find("GrenadeUnit_1");
