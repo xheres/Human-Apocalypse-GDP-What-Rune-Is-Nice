@@ -1,9 +1,9 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-public class BossStateCreateMuzzle : BossState {
+public class BossStateRetreat : BossState {
 
-    public BossStateCreateMuzzle(BossFSM _FSM)
+    public BossStateRetreat(BossFSM _FSM)
 	{
 		m_BossFSM = _FSM;
 	}
@@ -15,11 +15,11 @@ public class BossStateCreateMuzzle : BossState {
 
     public override void Execute()
     {
-
+        Debug.Log("Retreat");
     }
 
     public override void Exit()
     {
-
+        m_BossFSM.ChangeState(m_BossFSM.ReturnNextState());
     }
 }

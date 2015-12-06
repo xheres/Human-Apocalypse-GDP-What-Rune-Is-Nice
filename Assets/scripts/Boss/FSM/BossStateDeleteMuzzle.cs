@@ -10,16 +10,17 @@ public class BossStateDeleteMuzzle : BossState {
 
     public override void Enter()
     {
-
+        Execute();
     }
 
     public override void Execute()
     {
-
+        Debug.Log("Delete Muzzle");
+        Exit();
     }
 
     public override void Exit()
     {
-
+        m_BossFSM.ChangeState(m_BossFSM.ReturnNextState());
     }
 }
