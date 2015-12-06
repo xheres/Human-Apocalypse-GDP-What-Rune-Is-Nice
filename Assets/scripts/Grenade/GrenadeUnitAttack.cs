@@ -11,7 +11,7 @@ public class GrenadeUnitStateAttack : GrenadeUnitState {
 	[SerializeField] GameObject grenade;
 	GameObject currentMuzzle;
 	
-	public GrenadeUnitStateAttack(BossFSM _FSM)
+	public GrenadeUnitStateAttack(GrenadeUnitFSM _FSM)
 	{
 		m_GrenadeUnitFSM = _FSM;
 	}

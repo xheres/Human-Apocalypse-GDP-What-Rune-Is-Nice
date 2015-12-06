@@ -65,6 +65,13 @@
      <Compile Include="Assets\scripts\Debug\DummyMovement.cs" />
      <Compile Include="Assets\scripts\EnemyCreateMuzzle.cs" />
      <Compile Include="Assets\scripts\EnemyProperties.cs" />
+     <Compile Include="Assets\scripts\Grenade\GrenadeUnitAttack.cs" />
+     <Compile Include="Assets\scripts\Grenade\GrenadeUnitCreateMuzzle.cs" />
+     <Compile Include="Assets\scripts\Grenade\GrenadeUnitDeleteUnit.cs" />
+     <Compile Include="Assets\scripts\Grenade\GrenadeUnitFSM.cs" />
+     <Compile Include="Assets\scripts\Grenade\GrenadeUnitRetreat.cs" />
+     <Compile Include="Assets\scripts\Grenade\GrenadeUnitSpawn.cs" />
+     <Compile Include="Assets\scripts\Grenade\GrenadeUnitState.cs" />
      <Compile Include="Assets\scripts\Melee\MeleeFSM.cs" />
      <Compile Include="Assets\scripts\Melee\MeleeState.cs" />
      <Compile Include="Assets\scripts\Melee\MeleeStateAttack.cs" />
