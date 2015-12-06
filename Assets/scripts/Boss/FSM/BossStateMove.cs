@@ -15,11 +15,11 @@ public class BossStateMove : BossState {
 
     public override void Execute()
     {
-        Debug.Log("Randomly moves a set amount of space");
+        Debug.Log("Randomly moves a set amount of space in the X and Y direction in multiples of 1, not exceeding 3 units for each axis");
     }
 
     public override void Exit()
     {
-
+        m_BossFSM.MoveChangeState();
     }
 }
