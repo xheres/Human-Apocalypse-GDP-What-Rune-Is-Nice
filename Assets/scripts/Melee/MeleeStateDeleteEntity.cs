@@ -1,7 +1,7 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-public class MeleeStateDeleteEntity : MonoBehaviour
+public class MeleeStateDeleteEntity : MeleeState
 {
 
     bool delete = false;
