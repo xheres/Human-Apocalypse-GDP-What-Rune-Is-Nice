@@ -1,4 +1,8 @@
-﻿using UnityEngine;
+﻿// Lucas Lim 
+// P01 
+// 1402476D
+
+using UnityEngine;
 using System.Collections;
 
 public class MeleeStateAttack : MeleeState {
@@ -24,7 +28,7 @@ public class MeleeStateAttack : MeleeState {
     {
         if (!attack)
         {
-
+            // count the number of times the melee mob attacks
             chargeCounter = charge;
             enemyProp = melee.GetComponent<EnemyProperties>();
             int nAmmo = enemyProp.getAmmo();

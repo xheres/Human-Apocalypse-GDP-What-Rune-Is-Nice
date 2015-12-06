@@ -1,4 +1,8 @@
-﻿using UnityEngine;
+﻿// Lucas Lim 
+// P01 
+// 1402476D
+
+using UnityEngine;
 using System.Collections;
 
 public class MeleeFSM : MonoBehaviour {

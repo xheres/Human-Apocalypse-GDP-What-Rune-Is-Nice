@@ -1,4 +1,8 @@
-﻿using UnityEngine;
+﻿// Lucas Lim
+// P01
+// 1402476D
+
+using UnityEngine;
 using System.Collections;
 
 public class MeleeStateExplode : MeleeState
@@ -32,8 +36,9 @@ public class MeleeStateExplode : MeleeState
 
     public override void Execute()
     {
+        // starts the timer for the explosion
         explosionTimer -= Time.deltaTime;
-        if (explosionTimer <= 0)
+        if (explosionTimer <= 0.40f)
         {
             Exit();
         }
@@ -41,6 +46,7 @@ public class MeleeStateExplode : MeleeState
 
     public override void Exit()
     {
+        // destroy the explosion object
         MonoBehaviour.Destroy(explosionn);
         m_MeleeFSM.ChangeState(nextState);
     }
