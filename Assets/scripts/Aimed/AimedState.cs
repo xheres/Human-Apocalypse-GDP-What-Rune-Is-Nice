@@ -1,4 +1,8 @@
-﻿using UnityEngine;
+﻿//Name: Jared Koh
+//Admin No: 1402535G
+//Class: P01
+
+using UnityEngine;
 using System.Collections;
 
 public abstract class AimedState

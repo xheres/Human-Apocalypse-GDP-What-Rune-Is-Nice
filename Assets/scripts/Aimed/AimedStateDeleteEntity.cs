@@ -1,15 +1,34 @@
-﻿using UnityEngine;
+﻿//Name: Jared Koh
+//Admin No: 1402535G
+//Class: P01
+
+using UnityEngine;
 using System.Collections;
 
-public class AimedStateDeleteEntity : MonoBehaviour {
+public class AimedStateDeleteEntity : AimedState {
 
-	// Use this for initialization
-	void Start () {
-	
-	}
-	
-	// Update is called once per frame
-	void Update () {
-	
-	}
+    bool hasEntered = false;
+    public AimedStateDeleteEntity(AimedFSM _FSM)
+    {
+        m_AimedFSM = _FSM;
+    }
+
+    public override void Enter()
+    {
+        if (hasEntered == false)
+        {
+            Execute();
+            hasEntered = true;
+        }
+    }
+
+    public override void Execute()
+    {
+        Exit();
+    }
+
+    public override void Exit()
+    {
+        //Delete enemy gameobject
+    }
 }
