@@ -7,6 +7,7 @@ using System.Collections;
 
 public class MeleeFSM : MonoBehaviour {
 
+    MeleeState currentState;
 
     public void ChangeState(MeleeState state)
     {

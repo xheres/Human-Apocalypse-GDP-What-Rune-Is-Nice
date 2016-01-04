@@ -20,7 +20,7 @@ public class muzzle_fan : MonoBehaviour
     }
 	void Update () 
     {
-        if (enemyProp.getAmmo() <= 0 || enemyProp.getAmmo() == -1)
+        if (enemyProp.getAmmo() > 0 || enemyProp.getAmmo() == -1)
         {
             if (shotsPerRound != 0 && !shotFired)
             {

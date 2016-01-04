@@ -14,7 +14,7 @@ public class MeleeStateDeleteEntity : MeleeState
         m_MeleeFSM = _FSM;
     }
 
-    void Start()
+    public override void Enter()
     {
         if (!delete)
         {

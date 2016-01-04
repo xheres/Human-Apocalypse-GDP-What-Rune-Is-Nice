@@ -10,8 +10,7 @@ public class MeleeStateReturn : MeleeState {
     bool goBack = false;
 
     MeleeState nextState;
-
-
+    bool contact;
 
 	public MeleeStateReturn(MeleeFSM _FSM)
     {

@@ -9,6 +9,8 @@ public class MeleeStateRetreat : MeleeState {
 
     bool retreat = false;
 
+    MeleeState nextState;
+
 	public MeleeStateRetreat(MeleeFSM _FSM)
     {
         m_MeleeFSM = _FSM;

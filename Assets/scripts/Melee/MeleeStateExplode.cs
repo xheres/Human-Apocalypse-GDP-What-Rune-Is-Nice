@@ -12,6 +12,7 @@ public class MeleeStateExplode : MeleeState
     [SerializeField] GameObject explosionn;
     [SerializeField] float explosionDuration = 0.40f;
     GameObject explosion;
+    MeleeState nextState;
     float explosionTimer;
 
     public MeleeStateExplode(MeleeFSM _FSM)
@@ -26,7 +27,7 @@ public class MeleeStateExplode : MeleeState
             explosionTimer = explosionDuration;
             nextState = new MeleeStateDeleteEntity(m_MeleeFSM);
 
-            explosion = MonoBehaviour.Instantiate(explosionn, m_MeleeFSM.transform.position, Quaternion.identity);
+            explosion = MonoBehaviour.Instantiate(explosionn, m_MeleeFSM.transform.position, Quaternion.identity) as GameObject;
 
             explode = true;
         }

@@ -9,6 +9,11 @@ public class EnemyProperties : MonoBehaviour
     //public enum muzzleType { aimed, pattern };
     //public enum enemyType { standard, miniboss, mainboss };
     
+    void Update()
+    {
+        Debug.Log(maxAmmo);
+    }
+
     public void UseAmmo() { maxAmmo -= 1; }
     public int getAmmo() { return maxAmmo;  }
     public float getSpawnedYPos() { return spawnedYPos; }

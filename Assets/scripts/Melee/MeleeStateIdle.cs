@@ -46,7 +46,7 @@ public class MeleeStateIdle : MeleeState {
 
     void Timer()
     {
-        timer -= Timer.deltaTime;
+        timer -= Time.deltaTime;
             if (timer % 4 < 0)
         {
             // enemy will attack again
