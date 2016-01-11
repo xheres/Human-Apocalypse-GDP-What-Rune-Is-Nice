@@ -3,9 +3,8 @@ using System.Collections;
 
 public class EnemyCreateMuzzle : MonoBehaviour 
 {
-    [SerializeField]private float reloadTime = 5f;
-    private bool muzzleDeleted = true;
-    private EnemyProperties enemyProp;
+    bool muzzleDeleted = true;
+    EnemyProperties enemyProp;
 
     public void deleteMuzzle() { muzzleDeleted = true; }
 
@@ -18,7 +17,7 @@ public class EnemyCreateMuzzle : MonoBehaviour
     {
 	    if (!isSpawning() && !isExiting() && muzzleDeleted)
         {
-            Invoke("CreateMuzzle", reloadTime);
+            Invoke("CreateMuzzle", enemyProp.getReloadTime());
             muzzleDeleted = false;
         }
 	}
@@ -31,7 +30,7 @@ public class EnemyCreateMuzzle : MonoBehaviour
 
     bool isExiting()
     {
-        if (enemyProp.getAmmo() <= 0 && enemyProp.getAmmo() != -1) // Exit when enemy runs out of bullet (-1 is for debugging)
+        if (enemyProp.getAmmo() <= 0 && enemyProp.getAmmo() != -99) // Exit when enemy runs out of bullet (-99 is for debugging)
         {
             return true;
         }

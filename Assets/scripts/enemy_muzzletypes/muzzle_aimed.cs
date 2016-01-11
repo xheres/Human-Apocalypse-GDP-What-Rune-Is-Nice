@@ -3,16 +3,24 @@ using System.Collections;
 
 public class muzzle_aimed : MonoBehaviour 
 {
-    [SerializeField]private GameObject projectile;
-    [SerializeField]private int shotsPerRound;
-    [SerializeField]private float interval;
-    private EnemyProperties enemyProp;
+    EnemyProperties enemyProp;
+    GameObject projectile;
+    Transform playerTransform;
+    Transform myTransform;
 
-    private bool shotFired = false;
+    int shotsPerRound;
+
+    Vector3 diff;
+    bool shotFired = false;
 
     void Start()
     {
         enemyProp = GetComponentInParent<EnemyProperties>();
+        projectile = enemyProp.getProjectile();
+        playerTransform = GameObject.FindGameObjectWithTag("Player").transform;
+        myTransform = transform;
+
+        shotsPerRound = enemyProp.getShotsPerRound();
     }
 	void Update () 
     {
@@ -20,7 +28,7 @@ public class muzzle_aimed : MonoBehaviour
         {
             if (shotsPerRound != 0 && !shotFired)
             {
-                Invoke("createProjectile", interval);
+                Invoke("createProjectile", enemyProp.getInterval());
                 shotFired = true;
             }
             else if (shotsPerRound <= 0)
@@ -33,12 +41,15 @@ public class muzzle_aimed : MonoBehaviour
 
     void createProjectile()
     {
-        Instantiate(projectile, transform.position, Quaternion.identity);
-        if (enemyProp.getAmmo() != -1)
+        diff = (-(playerTransform.position - myTransform.position)).normalized;
+        float zRotation = Mathf.Atan2(diff.y, diff.x) * Mathf.Rad2Deg;
+
+        Instantiate(projectile, transform.position, Quaternion.Euler(0, 0, zRotation - 90));
+        if (enemyProp.getAmmo() != -99)
             enemyProp.UseAmmo();
         shotsPerRound -= 1;
         shotFired = false;
 
-        Debug.Log("Created");
+        Debug.Log(diff);
     }
 }
