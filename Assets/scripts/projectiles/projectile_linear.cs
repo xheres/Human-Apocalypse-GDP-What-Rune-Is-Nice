@@ -8,6 +8,9 @@ public class projectile_linear : MonoBehaviour
     [SerializeField] float accelerationTime = 0;
     [SerializeField] float accelerationDelay = 0;
     [SerializeField] float tangentialSpeed = 0;
+    [SerializeField] float trackingRange = 0;
+    [SerializeField] float trackingRotSpeed = 0;
+    [SerializeField] float duration = 0;
 
     public delegate void otherBehaviors();
     public event otherBehaviors before;
@@ -19,9 +22,14 @@ public class projectile_linear : MonoBehaviour
     float rotAngle;
 
     Transform myTransform;
+    Transform playerTransform;
+    Vector3 diff;
+    Quaternion rotation;
+    RaycastHit2D hit;
 
     void Start()
     {
+        playerTransform = GameObject.FindGameObjectWithTag("Player").transform;
         myTransform = transform;
         initSpeed = speed;
         rotAngle = myTransform.localRotation.z;
@@ -34,6 +42,15 @@ public class projectile_linear : MonoBehaviour
 
     void Update()
     {
+        duration -= Time.deltaTime;
+
+        // Destroy projectile if ran out of time
+        if(duration <= 0)
+        {
+            Destroy(gameObject);
+        }
+
+        // Destroy projectile if went out of bounds
         if(myTransform.position.y <= -5 || myTransform.position.y >= 12 || myTransform.position.x <= -8 || myTransform.position.x >= 8)
         {
             Destroy(gameObject);
@@ -78,6 +95,19 @@ public class projectile_linear : MonoBehaviour
             if (tangentialSpeed != 0)
             {
                 myTransform.RotateAround(myTransform.position + (Vector3.right * speed / tangentialSpeed), Vector3.forward, tangentialSpeed * Time.deltaTime);
+            }
+
+            //Handle tracking;
+            if(trackingRange > 0)
+            {
+                if(Vector2.Distance(playerTransform.position, myTransform.position) <= trackingRange)
+                {
+                    diff = (-(playerTransform.position - myTransform.position));
+                    float zRotation = Mathf.Atan2(diff.y, diff.x) * Mathf.Rad2Deg - 90;
+                    rotation = Quaternion.AngleAxis(zRotation, Vector3.forward);
+
+                    transform.rotation = Quaternion.Slerp(transform.rotation, rotation, Time.deltaTime * (trackingRotSpeed * 0.1f));
+                }
             }
         }
     }
