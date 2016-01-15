@@ -10,8 +10,8 @@ public class EnemyProperties : MonoBehaviour
     [SerializeField] int shotsPerRound;
     [SerializeField] float interval;
     [SerializeField] float reloadTime;
-    //public enum muzzleType { aimed, pattern };
-    //public enum enemyType { standard, miniboss, mainboss };
+
+    float prevZRotation;
 
     void Update()
     {
@@ -42,6 +42,10 @@ public class EnemyProperties : MonoBehaviour
     {
         return reloadTime;
     }
+    public float getPrevZRotation()
+    {
+        return prevZRotation;
+    }
     public GameObject getMuzzle()
     {
         return muzzle;
@@ -59,5 +63,9 @@ public class EnemyProperties : MonoBehaviour
     public void useShotsPerRound(int i)
     {
         shotsPerRound -= i;
+    }
+    public void setPrevZRotation(float z)
+    {
+        prevZRotation = z;
     }
 }

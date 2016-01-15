@@ -14,12 +14,12 @@ public class mExt_fan_consec : MonoBehaviour
 
     void OnEnable()
     {
-        muzzle.Before += rotateMuzzle;
+        muzzle.After += rotateMuzzle;
     }
 
     void OnDisable()
     {
-        muzzle.Before += rotateMuzzle;
+        muzzle.After += rotateMuzzle;
     }
 
     void rotateMuzzle()

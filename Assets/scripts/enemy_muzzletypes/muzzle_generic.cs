@@ -5,10 +5,11 @@ public class muzzle_generic : MonoBehaviour
 {
     EnemyProperties enemyProp;
     GameObject projectile;
+    GameObject createdProjectile;
     Quaternion rotation;
 
     [SerializeField] int projectilesPerShot = 1;
-    [SerializeField] Vector3 initRotation;
+    [SerializeField] float initRotation;
     [SerializeField] Vector2 projectileOffset;
 
     int shotsPerRound;
@@ -17,72 +18,75 @@ public class muzzle_generic : MonoBehaviour
     public event controlRotation After;
     public event controlRotation Before;
 
-    bool shotFired = false;
-    bool ammoTaken = false;
     float interval;
+    float prevZRotation;
 
     void Start()
     {
         enemyProp = GetComponentInParent<EnemyProperties>();
         projectile = enemyProp.getProjectile();
         shotsPerRound = enemyProp.getShotsPerRound();
-        rotation = Quaternion.Euler(initRotation);
+        prevZRotation = enemyProp.getPrevZRotation();
+        if(prevZRotation == 0)
+        {
+            rotation = Quaternion.Euler(new Vector3(0, 0, initRotation));
+        }
+        else
+        {
+            rotation = Quaternion.Euler(new Vector3(0, 0, prevZRotation));
+        }
+        
 
         interval = enemyProp.getInterval();
 
         projectileOffset += (Vector2)transform.position;
+
+        StartCoroutine(ShootProjectile());
     }
 
-    void Update()
+    IEnumerator ShootProjectile()
     {
-        if (enemyProp.getAmmo() > 0)
+        while (enemyProp.getAmmo() > 0)
         {
-            if (shotsPerRound > 0 && !shotFired)
+            if (shotsPerRound > 0)
             {
+                //shotFired = true;
                 for (int i = 0; i < projectilesPerShot; i++)
                 {
-                    Invoke("createProjectile", interval);
-                    shotFired = true;
+                    CreateProjectile();
                 }
-
-                ammoTaken = false;
 
                 if (After != null)
                 {
-
                     After();
                 }
+
+                if (enemyProp.getAmmo() != -99)
+                {
+                    enemyProp.UseAmmo();
+                }
+
+                shotsPerRound -= 1;
+
             }
             else if (shotsPerRound <= 0)
             {
+                enemyProp.setPrevZRotation(rotation.eulerAngles.z);
                 GetComponentInParent<EnemyCreateMuzzle>().deleteMuzzle();
                 Destroy(gameObject);
             }
+        yield return new WaitForSeconds(interval);
         }
     }
 
-    void createProjectile()
+    void CreateProjectile()
     {
+        createdProjectile = Instantiate(projectile, projectileOffset, rotation) as GameObject;
+
         if (Before != null)
         {
             Before();
         }
-
-        Instantiate(projectile, projectileOffset, rotation);
-
-        if (!ammoTaken)
-        {
-            if (enemyProp.getAmmo() != -99)
-            {
-                enemyProp.UseAmmo();
-            }
-
-            shotsPerRound -= 1;
-
-            ammoTaken = true;
-        }
-
-        shotFired = false;
     }
 
     public void setRotation(Quaternion q)
@@ -100,7 +104,7 @@ public class muzzle_generic : MonoBehaviour
         return rotation;
     }
 
-    public Vector3 getInitRotation()
+    public float getInitRotation()
     {
         return initRotation;
     }
@@ -113,5 +117,20 @@ public class muzzle_generic : MonoBehaviour
     public Vector2 getProjectileOffset()
     {
         return projectileOffset;
+    }
+
+    public GameObject getCreatedProjectile()
+    {
+        return createdProjectile;
+    }
+
+    public void setProjectile(GameObject proj)
+    {
+        projectile = proj;
+    }
+
+    public void getPrevZRotation(float z)
+    {
+        prevZRotation = z;
     }
 }

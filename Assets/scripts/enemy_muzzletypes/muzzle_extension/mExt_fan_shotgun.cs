@@ -6,6 +6,7 @@ public class mExt_fan_shotgun : MonoBehaviour
     muzzle_generic muzzle;
 
     [SerializeField] float angleDiff = 0;
+    [SerializeField] bool resetAfter;
 
     void Awake()
     {
@@ -15,13 +16,19 @@ public class mExt_fan_shotgun : MonoBehaviour
     void OnEnable()
     {
         muzzle.Before += rotateMuzzle;
-        muzzle.After += resetRotation;
+        if (resetAfter)
+        {
+            muzzle.After += resetRotation;
+        }
     }
 
     void OnDisable()
     {
         muzzle.Before -= rotateMuzzle;
-        muzzle.After -= resetRotation;
+        if (resetAfter)
+        {
+            muzzle.After -= resetRotation;
+        }
     }
 
     void rotateMuzzle()
@@ -31,6 +38,6 @@ public class mExt_fan_shotgun : MonoBehaviour
 
     void resetRotation()
     {
-        muzzle.setRotation(Quaternion.Euler(muzzle.getInitRotation()));
+        muzzle.setRotation(Quaternion.Euler(new Vector3(0, 0, muzzle.getInitRotation())));
     }
 }

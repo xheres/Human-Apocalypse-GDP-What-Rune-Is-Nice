@@ -50,7 +50,5 @@ public class muzzle_aimed : MonoBehaviour
             enemyProp.UseAmmo();
         shotsPerRound -= 1;
         shotFired = false;
-
-        Debug.Log(diff);
     }
 }

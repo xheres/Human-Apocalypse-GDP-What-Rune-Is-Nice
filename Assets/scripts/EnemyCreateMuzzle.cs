@@ -7,6 +7,8 @@ public class EnemyCreateMuzzle : MonoBehaviour
     EnemyProperties enemyProp;
     GameObject muzzle;
 
+    float prevMuzzleRotation;
+
     public void deleteMuzzle() { muzzleDeleted = true; }
 
     void Start()
