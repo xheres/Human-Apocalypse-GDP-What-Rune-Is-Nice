@@ -9,6 +9,7 @@ public class muzzle_aimed : MonoBehaviour
     Transform myTransform;
 
     int shotsPerRound;
+    int projectileIndex;
 
     Vector3 diff;
     bool shotFired = false;

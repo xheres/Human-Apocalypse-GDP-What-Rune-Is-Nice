@@ -5,12 +5,14 @@ public class EnemyCreateMuzzle : MonoBehaviour
 {
     bool muzzleDeleted = true;
     EnemyProperties enemyProp;
+    GameObject muzzle;
 
     public void deleteMuzzle() { muzzleDeleted = true; }
 
     void Start()
     {
         enemyProp = GetComponent<EnemyProperties>();
+        muzzle = enemyProp.getMuzzle();
     }
 
 	void Update() 
@@ -24,8 +26,8 @@ public class EnemyCreateMuzzle : MonoBehaviour
 
     void CreateMuzzle()
     {
-        GameObject newMuzzle = Instantiate(enemyProp.getMuzzle(), transform.position, Quaternion.identity) as GameObject;
-        newMuzzle.transform.parent = transform;
+        muzzle = Instantiate(enemyProp.getMuzzle(), transform.position, Quaternion.identity) as GameObject;
+        muzzle.transform.parent = transform;
     }
 
     bool isExiting()

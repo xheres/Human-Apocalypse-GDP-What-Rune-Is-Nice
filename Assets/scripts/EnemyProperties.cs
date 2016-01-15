@@ -46,10 +46,12 @@ public class EnemyProperties : MonoBehaviour
     {
         return muzzle;
     }
+
     public GameObject getProjectile()
     {
         return projectile;
     }
+
     public void setMuzzle(GameObject Muzzle)
     {
         muzzle = Muzzle;
