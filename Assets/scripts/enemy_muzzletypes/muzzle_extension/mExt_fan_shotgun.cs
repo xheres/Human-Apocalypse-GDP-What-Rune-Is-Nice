@@ -38,6 +38,6 @@ public class mExt_fan_shotgun : MonoBehaviour
 
     void resetRotation()
     {
-        muzzle.setRotation(Quaternion.Euler(new Vector3(0, 0, muzzle.getInitRotation())));
+        muzzle.setRotation(Quaternion.Euler(new Vector3(0, 0, muzzle.getZRotation())));
     }
 }

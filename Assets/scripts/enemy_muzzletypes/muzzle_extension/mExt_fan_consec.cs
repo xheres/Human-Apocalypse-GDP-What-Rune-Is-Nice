@@ -25,5 +25,6 @@ public class mExt_fan_consec : MonoBehaviour
     void rotateMuzzle()
     {
         muzzle.setRotation(Quaternion.Euler(0, 0, muzzle.getRotation().eulerAngles.z + angleDiff));
+        muzzle.setZRotation(muzzle.getZRotation() + angleDiff);
     }
 }

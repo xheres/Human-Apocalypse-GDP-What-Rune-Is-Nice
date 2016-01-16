@@ -19,6 +19,7 @@ public class muzzle_generic : MonoBehaviour
     public event controlRotation Before;
 
     float interval;
+    float zRotation;
     float prevZRotation;
 
     void Start()
@@ -30,10 +31,12 @@ public class muzzle_generic : MonoBehaviour
         if(prevZRotation == 0)
         {
             rotation = Quaternion.Euler(new Vector3(0, 0, initRotation));
+            zRotation = initRotation;
         }
         else
         {
             rotation = Quaternion.Euler(new Vector3(0, 0, prevZRotation));
+            zRotation = prevZRotation;
         }
         
 
@@ -129,8 +132,18 @@ public class muzzle_generic : MonoBehaviour
         projectile = proj;
     }
 
-    public void getPrevZRotation(float z)
+    public void setPrevZRotation(float z)
     {
         prevZRotation = z;
+    }
+
+    public void setZRotation(float z)
+    {
+        zRotation = z;
+    }
+
+    public float getZRotation()
+    {
+        return zRotation;
     }
 }

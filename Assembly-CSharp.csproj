@@ -85,6 +85,7 @@
      <Compile Include="Assets\scripts\Melee\MeleeStateReturn.cs" />
      <Compile Include="Assets\scripts\Melee\MeleeStateSpawn.cs" />
      <Compile Include="Assets\scripts\OnSpawn.cs" />
+     <Compile Include="Assets\scripts\PatternCreator\pc_cornerSpread.cs" />
      <Compile Include="Assets\scripts\PlayerController.cs" />
      <Compile Include="Assets\scripts\Satellite\FSM\SatelliteFSM.cs" />
      <Compile Include="Assets\scripts\Satellite\FSM\SatelliteState.cs" />
