@@ -19,7 +19,7 @@ public class Despawn : MonoBehaviour
 
     void Update()
     {
-        if (properties.getAmmo() <= 0 && properties.getAmmo() != -1)
+        if (properties.getAmmo() <= 0 && properties.getAmmo() != -99)
         {
             Invoke("Remove", 1);
             if (!isDespawning)

@@ -13,6 +13,7 @@ public class projectile_linear : MonoBehaviour
     [SerializeField] float duration = 0;
 
     public delegate void otherBehaviors();
+    public event otherBehaviors OnStart;
     public event otherBehaviors Before;
     public event otherBehaviors Within;
     public event otherBehaviors After;
@@ -31,6 +32,12 @@ public class projectile_linear : MonoBehaviour
         playerTransform = GameObject.FindGameObjectWithTag("Player").transform;
         myTransform = transform;
         initSpeed = speed;
+
+        if (OnStart != null)
+        {
+            OnStart();
+        }
+
     }
 
     void Update()

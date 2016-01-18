@@ -19,31 +19,56 @@ public class pc_cornerSpread : MonoBehaviour
 
 
         Invoke("CreateLeft", 0f);
-        Invoke("CreateRight", 0.5f);
+        Invoke("CreateRight", 1f);
 	}
 
     void CreateLeft()
     {
         Instantiate(muzzleC[0], tlPos, Quaternion.identity);
         Instantiate(muzzleC[3], blPos, Quaternion.identity);
-        //Invoke leftDelayed
+        Invoke("CreateLeftDelayed", 7.5f);
     }
 
     void CreateRight()
     {
         Instantiate(muzzleC[6], trPos, Quaternion.identity);
         Instantiate(muzzleC[9], brPos, Quaternion.identity);
-        //Invoke rightDelayed
+        Invoke("CreateRightDelayed", 5.5f);
     }
 
     void CreateLeftDelayed()
     {
-    
+        Instantiate(muzzleC[1], tlPos, Quaternion.identity);
+        Instantiate(muzzleC[4], blPos, Quaternion.identity);
+        StartCoroutine(LastLeftDelayed());
     }
 
     void CreateRightDelayed()
     {
-    
+        Instantiate(muzzleC[7], trPos, Quaternion.identity);
+        Instantiate(muzzleC[10], brPos, Quaternion.identity);
+        StartCoroutine(LastRightDelayed());
     }
-	
+
+    IEnumerator LastLeftDelayed()
+    {
+        yield return new WaitForSeconds(4.75f);
+        Instantiate(muzzleC[5], blPos, Quaternion.identity);
+        Instantiate(muzzleC[2], tlPos, Quaternion.identity);
+        yield return new WaitForSeconds(0.5f);
+        Instantiate(muzzleC[5], blPos, Quaternion.identity);
+        Instantiate(muzzleC[2], tlPos, Quaternion.identity);
+        yield return null;
+    }
+
+    IEnumerator LastRightDelayed()
+    {
+        yield return new WaitForSeconds(6.75f);
+        Instantiate(muzzleC[11], brPos, Quaternion.identity);
+        Instantiate(muzzleC[8], trPos, Quaternion.identity);
+        yield return new WaitForSeconds(0.5f);
+        Instantiate(muzzleC[11], brPos, Quaternion.identity);
+        Instantiate(muzzleC[8], trPos, Quaternion.identity);
+        yield return null;
+    }
 }
