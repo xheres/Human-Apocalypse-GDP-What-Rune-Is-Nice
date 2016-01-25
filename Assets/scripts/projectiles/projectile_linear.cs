@@ -51,13 +51,13 @@ public class projectile_linear : MonoBehaviour
             {
                 After();
             }
-            Destroy(gameObject);
+            DeleteProjectile();
         }
 
         // Destroy projectile if went out of bounds
-        if(myTransform.position.y <= -5 || myTransform.position.y >= 15 || myTransform.position.x <= -8 || myTransform.position.x >= 8)
+        if(myTransform.position.y <= -2 || myTransform.position.y >= 15 || myTransform.position.x <= -5.5 || myTransform.position.x >= 5.5)
         {
-            Destroy(gameObject);
+            DeleteProjectile();
         }
 
         // Run before behavior
@@ -131,7 +131,7 @@ public class projectile_linear : MonoBehaviour
         if(col.gameObject.tag == "Player")
         {
             Debug.Log("hit"); //Apply Damage
-            Destroy(gameObject);
+            DeleteProjectile();
         }
     }
 
@@ -147,6 +147,14 @@ public class projectile_linear : MonoBehaviour
             speed -= (initSpeed - endSpeed) / (accelerationTime / Time.deltaTime);
         }
         yield return null;
+    }
+
+    void DeleteProjectile()
+    {
+        // Do Animation first
+        // if (animation is done)
+            Destroy(gameObject);
+
     }
 
     public void beforeDone()
