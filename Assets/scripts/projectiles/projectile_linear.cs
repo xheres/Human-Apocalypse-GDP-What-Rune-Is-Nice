@@ -55,7 +55,7 @@ public class projectile_linear : MonoBehaviour
         }
 
         // Destroy projectile if went out of bounds
-        if(myTransform.position.y <= -2 || myTransform.position.y >= 15 || myTransform.position.x <= -5.5 || myTransform.position.x >= 5.5)
+        if(myTransform.position.y <= -2 || myTransform.position.y >= 15 || myTransform.position.x <= -3 || myTransform.position.x >= 3)
         {
             DeleteProjectile();
         }

@@ -12,10 +12,10 @@ public class pc_cornerSpread : MonoBehaviour
 
 	void Start () 
     {
-        trPos = new Vector2(4.7f, 8.7f);
-        tlPos = new Vector2(-4.7f, 8.7f);
-        brPos = new Vector2(4.7f, -0.7f);
-        blPos = new Vector2(-4.7f, -0.7f);
+        trPos = new Vector2(2.7f, 8.7f);
+        tlPos = new Vector2(-2.7f, 8.7f);
+        brPos = new Vector2(2.7f, -0.7f);
+        blPos = new Vector2(-2.7f, -0.7f);
 
 
         Invoke("CreateLeft", 0f);

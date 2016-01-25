@@ -7,8 +7,8 @@ public class PlayerController : MonoBehaviour
 	float duration = 1.5f,
 		  MAX_Y = 4.0f,
           MIN_Y = -0.8f,
-          MAX_X = 4.8f,
-          MIN_X = -4.8f;
+          MAX_X = 2.5f,
+          MIN_X = -2.5f;
     Vector2 endPoint,
             pos;
 	bool flag = false;
