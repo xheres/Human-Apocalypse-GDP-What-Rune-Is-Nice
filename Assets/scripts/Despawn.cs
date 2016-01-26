@@ -3,6 +3,7 @@ using System.Collections;
 
 public class Despawn : MonoBehaviour 
 {
+    DistanceController distanceController;
     EnemyProperties properties;
     Transform myTransform;
     Vector2 despawnVector;
@@ -12,6 +13,7 @@ public class Despawn : MonoBehaviour
 
     void Start()
     {
+        distanceController = GameObject.Find("_DistanceController").GetComponent<DistanceController>();
         properties = GetComponent<EnemyProperties>();
         myTransform = transform;
         despawnVector = new Vector2(myTransform.position.x, 12);
@@ -19,7 +21,7 @@ public class Despawn : MonoBehaviour
 
     void Update()
     {
-        if (properties.getAmmo() <= 0 && properties.getAmmo() != -99)
+        if ( (distanceController.checkBossStage()) || (properties.getAmmo() <= 0 && properties.getAmmo() != -99) )
         {
             Invoke("Remove", 1);
             if (!isDespawning)
@@ -32,6 +34,7 @@ public class Despawn : MonoBehaviour
 
     void Remove()
     {
+        properties.SetAmmo(0);
         myTransform.position = Vector2.Lerp(myTransform.position, despawnVector, lerpRate * Time.deltaTime);
     }
 }

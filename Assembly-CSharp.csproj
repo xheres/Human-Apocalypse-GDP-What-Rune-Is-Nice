@@ -19,7 +19,7 @@
 	<DebugType>full</DebugType>
 	<Optimize>false</Optimize>
 	<OutputPath>Temp\bin\Debug\</OutputPath>
-	<DefineConstants>DEBUG;TRACE;UNITY_5_2_3;UNITY_5_2;UNITY_5;ENABLE_NEW_BUGREPORTER;ENABLE_2D_PHYSICS;ENABLE_4_6_FEATURES;ENABLE_AUDIO;ENABLE_CACHING;ENABLE_CLOTH;ENABLE_DUCK_TYPING;ENABLE_FRAME_DEBUGGER;ENABLE_GENERICS;ENABLE_HOME_SCREEN;ENABLE_IMAGEEFFECTS;ENABLE_LIGHT_PROBES_LEGACY;ENABLE_MICROPHONE;ENABLE_MULTIPLE_DISPLAYS;ENABLE_PHYSICS;ENABLE_PLUGIN_INSPECTOR;ENABLE_SHADOWS;ENABLE_SINGLE_INSTANCE_BUILD_SETTING;ENABLE_SPRITES;ENABLE_TERRAIN;ENABLE_RAKNET;ENABLE_UNET;ENABLE_UNITYEVENTS;ENABLE_VR;ENABLE_WEBCAM;ENABLE_WWW;ENABLE_CLOUD_SERVICES;ENABLE_CLOUD_SERVICES_ADS;ENABLE_CLOUD_HUB;ENABLE_CLOUD_PROJECT_ID;ENABLE_CLOUD_SERVICES_ANALYTICS;ENABLE_CLOUD_SERVICES_UNET;ENABLE_CLOUD_SERVICES_BUILD;ENABLE_CLOUD_LICENSE;ENABLE_EDITOR_METRICS;ENABLE_REFLECTION_BUFFERS;INCLUDE_DYNAMIC_GI;INCLUDE_GI;INCLUDE_IL2CPP;INCLUDE_DIRECTX12;PLATFORM_SUPPORTS_MONO;RENDER_SOFTWARE_CURSOR;ENABLE_LOCALIZATION;ENABLE_ANDROID_ATLAS_ETC1_COMPRESSION;UNITY_STANDALONE_WIN;UNITY_STANDALONE;ENABLE_SUBSTANCE;ENABLE_TEXTUREID_MAP;ENABLE_RUNTIME_GI;ENABLE_MOVIES;ENABLE_NETWORK;ENABLE_CRUNCH_TEXTURE_COMPRESSION;ENABLE_LOG_MIXED_STACKTRACE;ENABLE_UNITYWEBREQUEST;ENABLE_EVENT_QUEUE;ENABLE_WEBSOCKET_HOST;ENABLE_MONO;ENABLE_PROFILER;UNITY_ASSERTIONS;UNITY_EDITOR;UNITY_EDITOR_64;UNITY_EDITOR_WIN</DefineConstants>
+	<DefineConstants>DEBUG;TRACE;UNITY_5_2_1;UNITY_5_2;UNITY_5;ENABLE_NEW_BUGREPORTER;ENABLE_2D_PHYSICS;ENABLE_4_6_FEATURES;ENABLE_AUDIO;ENABLE_CACHING;ENABLE_CLOTH;ENABLE_DUCK_TYPING;ENABLE_FRAME_DEBUGGER;ENABLE_GENERICS;ENABLE_HOME_SCREEN;ENABLE_IMAGEEFFECTS;ENABLE_LIGHT_PROBES_LEGACY;ENABLE_MICROPHONE;ENABLE_MULTIPLE_DISPLAYS;ENABLE_PHYSICS;ENABLE_PLUGIN_INSPECTOR;ENABLE_SHADOWS;ENABLE_SINGLE_INSTANCE_BUILD_SETTING;ENABLE_SPRITES;ENABLE_TERRAIN;ENABLE_RAKNET;ENABLE_UNET;ENABLE_UNITYEVENTS;ENABLE_VR;ENABLE_WEBCAM;ENABLE_WWW;ENABLE_CLOUD_SERVICES;ENABLE_CLOUD_SERVICES_ADS;ENABLE_CLOUD_HUB;ENABLE_CLOUD_PROJECT_ID;ENABLE_CLOUD_SERVICES_ANALYTICS;ENABLE_CLOUD_SERVICES_UNET;ENABLE_CLOUD_SERVICES_BUILD;ENABLE_CLOUD_LICENSE;ENABLE_EDITOR_METRICS;ENABLE_REFLECTION_BUFFERS;INCLUDE_DYNAMIC_GI;INCLUDE_GI;INCLUDE_IL2CPP;INCLUDE_DIRECTX12;PLATFORM_SUPPORTS_MONO;RENDER_SOFTWARE_CURSOR;ENABLE_LOCALIZATION;ENABLE_ANDROID_ATLAS_ETC1_COMPRESSION;UNITY_STANDALONE_WIN;UNITY_STANDALONE;ENABLE_SUBSTANCE;ENABLE_TEXTUREID_MAP;ENABLE_RUNTIME_GI;ENABLE_MOVIES;ENABLE_NETWORK;ENABLE_CRUNCH_TEXTURE_COMPRESSION;ENABLE_LOG_MIXED_STACKTRACE;ENABLE_UNITYWEBREQUEST;ENABLE_EVENT_QUEUE;ENABLE_WEBSOCKET_HOST;ENABLE_MONO;ENABLE_PROFILER;UNITY_ASSERTIONS;UNITY_EDITOR;UNITY_EDITOR_64;UNITY_EDITOR_WIN</DefineConstants>
 	<ErrorReport>prompt</ErrorReport>
 	<WarningLevel>4</WarningLevel>
 	<NoWarn>0169</NoWarn>
@@ -38,55 +38,20 @@
 	<Reference Include="System.Core" />
 	<Reference Include="System.Xml.Linq" />
 	<Reference Include="UnityEngine">
-	  <HintPath>C:/Program Files/Unity/Editor/Data/Managed/UnityEngine.dll</HintPath>
+	  <HintPath>D:/Unity/Editor/Data/Managed/UnityEngine.dll</HintPath>
 	</Reference>
 	<Reference Include="UnityEditor">
-	  <HintPath>C:/Program Files/Unity/Editor/Data/Managed/UnityEditor.dll</HintPath>
+	  <HintPath>D:/Unity/Editor/Data/Managed/UnityEditor.dll</HintPath>
 	</Reference>
   </ItemGroup>
   <ItemGroup>
-     <Compile Include="Assets\scripts\Aimed\AimedFSM.cs" />
-     <Compile Include="Assets\scripts\Aimed\AimedState.cs" />
-     <Compile Include="Assets\scripts\Aimed\AimedStateAttack.cs" />
-     <Compile Include="Assets\scripts\Aimed\AimedStateCreateMuzzle.cs" />
-     <Compile Include="Assets\scripts\Aimed\AimedStateDeleteEntity.cs" />
-     <Compile Include="Assets\scripts\Aimed\AimedStateRetreat.cs" />
-     <Compile Include="Assets\scripts\Aimed\AimedStateSpawn.cs" />
      <Compile Include="Assets\scripts\Background\Background.cs" />
-     <Compile Include="Assets\scripts\Boss\FSM\BossFSM.cs" />
-     <Compile Include="Assets\scripts\Boss\FSM\BossState.cs" />
-     <Compile Include="Assets\scripts\Boss\FSM\BossStateAttack.cs" />
-     <Compile Include="Assets\scripts\Boss\FSM\BossStateCreateMuzzle.cs" />
-     <Compile Include="Assets\scripts\Boss\FSM\BossStateDeleteEntity.cs" />
-     <Compile Include="Assets\scripts\Boss\FSM\BossStateDeleteMuzzle.cs" />
-     <Compile Include="Assets\scripts\Boss\FSM\BossStateMove.cs" />
-     <Compile Include="Assets\scripts\Boss\FSM\BossStateRetreat.cs" />
-     <Compile Include="Assets\scripts\Boss\FSM\BossStateSpawn.cs" />
-     <Compile Include="Assets\scripts\Boss\dev_Boss\Pattern01\PatternA.cs" />
-     <Compile Include="Assets\scripts\Boss\dev_Boss\Pattern01\PatternA_movement.cs" />
-     <Compile Include="Assets\scripts\Debug\DummyMovement.cs" />
      <Compile Include="Assets\scripts\Despawn.cs" />
      <Compile Include="Assets\scripts\Distance\DistanceController.cs" />
      <Compile Include="Assets\scripts\EnemyCreateMuzzle.cs" />
      <Compile Include="Assets\scripts\EnemyProperties.cs" />
-     <Compile Include="Assets\scripts\Grenade\GrenadeUnitAttack.cs" />
-     <Compile Include="Assets\scripts\Grenade\GrenadeUnitCreateMuzzle.cs" />
-     <Compile Include="Assets\scripts\Grenade\GrenadeUnitDeleteUnit.cs" />
-     <Compile Include="Assets\scripts\Grenade\GrenadeUnitFSM.cs" />
-     <Compile Include="Assets\scripts\Grenade\GrenadeUnitRetreat.cs" />
-     <Compile Include="Assets\scripts\Grenade\GrenadeUnitSpawn.cs" />
-     <Compile Include="Assets\scripts\Grenade\GrenadeUnitState.cs" />
-     <Compile Include="Assets\scripts\Melee\MeleeFSM.cs" />
-     <Compile Include="Assets\scripts\Melee\MeleeState.cs" />
-     <Compile Include="Assets\scripts\Melee\MeleeStateAttack.cs" />
-     <Compile Include="Assets\scripts\Melee\MeleeStateDeleteEntity.cs" />
-     <Compile Include="Assets\scripts\Melee\MeleeStateExplode.cs" />
-     <Compile Include="Assets\scripts\Melee\MeleeStateIdle.cs" />
-     <Compile Include="Assets\scripts\Melee\MeleeStateRetreat.cs" />
-     <Compile Include="Assets\scripts\Melee\MeleeStateReturn.cs" />
-     <Compile Include="Assets\scripts\Melee\MeleeStateSpawn.cs" />
-     <Compile Include="Assets\scripts\Muzzles\Old\muzzle_aimed.cs" />
-     <Compile Include="Assets\scripts\Muzzles\Old\muzzle_fan.cs" />
+     <Compile Include="Assets\scripts\Muzzles\_Old\muzzle_aimed.cs" />
+     <Compile Include="Assets\scripts\Muzzles\_Old\muzzle_fan.cs" />
      <Compile Include="Assets\scripts\Muzzles\muzzle_extension\dev_Boss\mExt_CircleAround.cs" />
      <Compile Include="Assets\scripts\Muzzles\muzzle_extension\mExt_aimed.cs" />
      <Compile Include="Assets\scripts\Muzzles\muzzle_extension\mExt_fan_consec.cs" />
@@ -97,39 +62,68 @@
      <Compile Include="Assets\scripts\Muzzles\muzzle_generic.cs" />
      <Compile Include="Assets\scripts\OnSpawn.cs" />
      <Compile Include="Assets\scripts\PatternCreator\pc_cornerSpread.cs" />
-     <Compile Include="Assets\scripts\PlayerController.cs" />
-     <Compile Include="Assets\scripts\Satellite\FSM\SatelliteFSM.cs" />
-     <Compile Include="Assets\scripts\Satellite\FSM\SatelliteState.cs" />
-     <Compile Include="Assets\scripts\Satellite\FSM\SatelliteStateFire.cs" />
-     <Compile Include="Assets\scripts\Satellite\FSM\SatelliteStateSpawn.cs" />
-     <Compile Include="Assets\scripts\Satellite\FSM\SatelliteStateStandby.cs" />
-     <Compile Include="Assets\scripts\Satellite\FSM\SatelliteStateStartCooldown.cs" />
-     <Compile Include="Assets\scripts\Satellite\FSM\SatelliteStateWarning.cs" />
-     <Compile Include="Assets\scripts\Satellite\SatelliteController.cs" />
-     <Compile Include="Assets\scripts\Satellite\laserProjectile.cs" />
+     <Compile Include="Assets\scripts\Player\PlayerController.cs" />
+     <Compile Include="Assets\scripts\Projectiles\projectil Extension\pExt_createAlive.cs" />
+     <Compile Include="Assets\scripts\Projectiles\projectil Extension\pExt_createTimeout.cs" />
+     <Compile Include="Assets\scripts\Projectiles\projectile_linear.cs" />
+     <Compile Include="Assets\scripts\Projectiles\small_whitered_aimed.cs" />
+     <Compile Include="Assets\scripts\Projectiles\small_whitered_sharp.cs" />
      <Compile Include="Assets\scripts\Spawner_Script.cs" />
-     <Compile Include="Assets\scripts\projectiles\projectil Extension\pExt_createAlive.cs" />
-     <Compile Include="Assets\scripts\projectiles\projectil Extension\pExt_createTimeout.cs" />
-     <Compile Include="Assets\scripts\projectiles\projectile_linear.cs" />
-     <Compile Include="Assets\scripts\projectiles\small_whitered_aimed.cs" />
-     <Compile Include="Assets\scripts\projectiles\small_whitered_sharp.cs" />
- <Reference Include="UnityEngine.Advertisements">
- <HintPath>C:/Program Files/Unity/Editor/Data/UnityExtensions/Unity/Advertisements/UnityEngine.Advertisements.dll</HintPath>
- </Reference>
+     <Compile Include="Assets\scripts\_Old\Debug\DummyMovement.cs" />
+     <Compile Include="Assets\scripts\_Old\FSM\Aimed\AimedFSM.cs" />
+     <Compile Include="Assets\scripts\_Old\FSM\Aimed\AimedState.cs" />
+     <Compile Include="Assets\scripts\_Old\FSM\Aimed\AimedStateAttack.cs" />
+     <Compile Include="Assets\scripts\_Old\FSM\Aimed\AimedStateCreateMuzzle.cs" />
+     <Compile Include="Assets\scripts\_Old\FSM\Aimed\AimedStateDeleteEntity.cs" />
+     <Compile Include="Assets\scripts\_Old\FSM\Aimed\AimedStateRetreat.cs" />
+     <Compile Include="Assets\scripts\_Old\FSM\Aimed\AimedStateSpawn.cs" />
+     <Compile Include="Assets\scripts\_Old\FSM\Boss\FSM\BossFSM.cs" />
+     <Compile Include="Assets\scripts\_Old\FSM\Boss\FSM\BossState.cs" />
+     <Compile Include="Assets\scripts\_Old\FSM\Boss\FSM\BossStateAttack.cs" />
+     <Compile Include="Assets\scripts\_Old\FSM\Boss\FSM\BossStateCreateMuzzle.cs" />
+     <Compile Include="Assets\scripts\_Old\FSM\Boss\FSM\BossStateDeleteEntity.cs" />
+     <Compile Include="Assets\scripts\_Old\FSM\Boss\FSM\BossStateDeleteMuzzle.cs" />
+     <Compile Include="Assets\scripts\_Old\FSM\Boss\FSM\BossStateMove.cs" />
+     <Compile Include="Assets\scripts\_Old\FSM\Boss\FSM\BossStateRetreat.cs" />
+     <Compile Include="Assets\scripts\_Old\FSM\Boss\FSM\BossStateSpawn.cs" />
+     <Compile Include="Assets\scripts\_Old\FSM\Boss\dev_Boss\Pattern01\PatternA.cs" />
+     <Compile Include="Assets\scripts\_Old\FSM\Boss\dev_Boss\Pattern01\PatternA_movement.cs" />
+     <Compile Include="Assets\scripts\_Old\FSM\Grenade\GrenadeUnitAttack.cs" />
+     <Compile Include="Assets\scripts\_Old\FSM\Grenade\GrenadeUnitCreateMuzzle.cs" />
+     <Compile Include="Assets\scripts\_Old\FSM\Grenade\GrenadeUnitDeleteUnit.cs" />
+     <Compile Include="Assets\scripts\_Old\FSM\Grenade\GrenadeUnitFSM.cs" />
+     <Compile Include="Assets\scripts\_Old\FSM\Grenade\GrenadeUnitRetreat.cs" />
+     <Compile Include="Assets\scripts\_Old\FSM\Grenade\GrenadeUnitSpawn.cs" />
+     <Compile Include="Assets\scripts\_Old\FSM\Grenade\GrenadeUnitState.cs" />
+     <Compile Include="Assets\scripts\_Old\FSM\Melee\MeleeFSM.cs" />
+     <Compile Include="Assets\scripts\_Old\FSM\Melee\MeleeState.cs" />
+     <Compile Include="Assets\scripts\_Old\FSM\Melee\MeleeStateAttack.cs" />
+     <Compile Include="Assets\scripts\_Old\FSM\Melee\MeleeStateDeleteEntity.cs" />
+     <Compile Include="Assets\scripts\_Old\FSM\Melee\MeleeStateExplode.cs" />
+     <Compile Include="Assets\scripts\_Old\FSM\Melee\MeleeStateIdle.cs" />
+     <Compile Include="Assets\scripts\_Old\FSM\Melee\MeleeStateRetreat.cs" />
+     <Compile Include="Assets\scripts\_Old\FSM\Melee\MeleeStateReturn.cs" />
+     <Compile Include="Assets\scripts\_Old\FSM\Melee\MeleeStateSpawn.cs" />
+     <Compile Include="Assets\scripts\_Old\FSM\Satellite\FSM\SatelliteFSM.cs" />
+     <Compile Include="Assets\scripts\_Old\FSM\Satellite\FSM\SatelliteState.cs" />
+     <Compile Include="Assets\scripts\_Old\FSM\Satellite\FSM\SatelliteStateFire.cs" />
+     <Compile Include="Assets\scripts\_Old\FSM\Satellite\FSM\SatelliteStateSpawn.cs" />
+     <Compile Include="Assets\scripts\_Old\FSM\Satellite\FSM\SatelliteStateStandby.cs" />
+     <Compile Include="Assets\scripts\_Old\FSM\Satellite\FSM\SatelliteStateStartCooldown.cs" />
+     <Compile Include="Assets\scripts\_Old\FSM\Satellite\FSM\SatelliteStateWarning.cs" />
+     <Compile Include="Assets\scripts\_Old\FSM\Satellite\SatelliteController.cs" />
+     <Compile Include="Assets\scripts\_Old\FSM\Satellite\laserProjectile.cs" />
  <Reference Include="UnityEngine.UI">
- <HintPath>C:/Program Files/Unity/Editor/Data/UnityExtensions/Unity/GUISystem/UnityEngine.UI.dll</HintPath>
+ <HintPath>D:/Unity/Editor/Data/UnityExtensions/Unity/GUISystem/UnityEngine.UI.dll</HintPath>
  </Reference>
  <Reference Include="UnityEngine.Networking">
- <HintPath>C:/Program Files/Unity/Editor/Data/UnityExtensions/Unity/Networking/UnityEngine.Networking.dll</HintPath>
- </Reference>
- <Reference Include="UnityEngine.Analytics">
- <HintPath>C:/Program Files/Unity/Editor/Data/UnityExtensions/Unity/UnityAnalytics/UnityEngine.Analytics.dll</HintPath>
+ <HintPath>D:/Unity/Editor/Data/UnityExtensions/Unity/Networking/UnityEngine.Networking.dll</HintPath>
  </Reference>
  <Reference Include="Mono.Cecil">
- <HintPath>C:/Program Files/Unity/Editor/Data/Managed/Mono.Cecil.dll</HintPath>
+ <HintPath>D:/Unity/Editor/Data/Managed/Mono.Cecil.dll</HintPath>
  </Reference>
  <Reference Include="UnityEditor.iOS.Extensions.Xcode">
- <HintPath>C:/Program Files/Unity/Editor/Data/PlaybackEngines/iOSSupport/UnityEditor.iOS.Extensions.Xcode.dll</HintPath>
+ <HintPath>D:/Unity/Editor/Data/PlaybackEngines/iOSSupport/UnityEditor.iOS.Extensions.Xcode.dll</HintPath>
  </Reference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

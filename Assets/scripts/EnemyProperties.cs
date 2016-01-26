@@ -22,10 +22,17 @@ public class EnemyProperties : MonoBehaviour
     {
         maxAmmo -= 1;
     }
+
+    public void SetAmmo(int ammo)
+    {
+        maxAmmo = ammo;
+    }
+
     public int getAmmo()
     {
         return maxAmmo;
     }
+
     public float getSpawnedYPos()
     {
         return spawnedYPos;

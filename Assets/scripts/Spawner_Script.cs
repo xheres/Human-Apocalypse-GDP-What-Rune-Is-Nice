@@ -4,28 +4,50 @@ using System.Collections.Generic;
 
 public class Spawner_Script : MonoBehaviour 
 {
-    private int curStage;
-    private int enemyIndex;
-    private int prevIndex;
-    private bool enemyOnField;
-    [SerializeField] private GameObject[] enemySet;
+    int curStage;
+    int enemyIndex;
+    int prevIndex;
+    bool enemyOnField;
+    int stageOffset;
 
-    private int stageOffset;
+    GameObject createdGroup;
+    DistanceController distanceController;
 
-    void Update()
+    [SerializeField] GameObject[] enemyGroup;
+
+    
+
+    void Start()
     {
-        if (!enemyOnField)
-            Spawn();
+        distanceController = GameObject.Find("_DistanceController").GetComponent<DistanceController>();
+        StartCoroutine(Spawn());
     }
 
-    void Spawn()
+    IEnumerator Spawn()
     {
-        SetEnemySet(curStage);
-        Instantiate(enemySet[0], transform.position, Quaternion.identity);
-        enemyOnField = true;
+        while (true)
+        {
+            if (!distanceController.checkBossStage())
+            {
+                if (!enemyOnField)
+                {
+                    enemyOnField = true;
+                    yield return new WaitForSeconds(0.5f);
+                    SetEnemyGroup(curStage);
+                    createdGroup = Instantiate(enemyGroup[0], transform.position, Quaternion.identity) as GameObject;
+                }
+
+                if (GameObject.FindWithTag("Enemy") == null)
+                {
+                    Destroy(createdGroup);
+                    enemyOnField = false;
+                }
+            }
+            yield return new WaitForSeconds(0.1f);
+        }
     }
 
-    void SetEnemySet(int stage)
+    void SetEnemyGroup(int stage)
     {
         stageOffset = (stage - 1) * 10;
 
@@ -33,10 +55,5 @@ public class Spawner_Script : MonoBehaviour
 
         if(prevIndex == enemyIndex)
             enemyIndex = Random.Range(0 + stageOffset, 9 + stageOffset);
-    }
-
-    public void NoEnemiesLeft()
-    {
-        enemyOnField = true;
     }
 }

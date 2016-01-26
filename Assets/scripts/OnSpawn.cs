@@ -13,16 +13,15 @@ public class OnSpawn : MonoBehaviour
     void Start()
     {
         enemyProp = GetComponent<EnemyProperties>();
-        myTransform = transform;
-        maxY = new Vector2(0, enemyProp.getSpawnedYPos());
+        maxY = new Vector2(transform.position.x, enemyProp.getSpawnedYPos());
     }
 
 	void Update () 
     {
-        if(myTransform.position.y != maxY.y && !hasSpawned)
-            transform.position = Vector3.Lerp(myTransform.position, maxY, lerpRate * Time.deltaTime);
+        if(!hasSpawned)
+            transform.position = Vector3.Lerp(transform.position, maxY, lerpRate * Time.deltaTime);
 
-        if (myTransform.position.y <= 6.6)
+        if (transform.position.y <= enemyProp.getSpawnedYPos() + 0.01f)
             hasSpawned = true;
 	}
 }
