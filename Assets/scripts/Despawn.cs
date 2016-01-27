@@ -16,7 +16,7 @@ public class Despawn : MonoBehaviour
         distanceController = GameObject.Find("_DistanceController").GetComponent<DistanceController>();
         properties = GetComponent<EnemyProperties>();
         myTransform = transform;
-        despawnVector = new Vector2(myTransform.position.x, 12);
+        despawnVector = new Vector2(myTransform.position.x, 15);
     }
 
     void Update()
@@ -28,7 +28,7 @@ public class Despawn : MonoBehaviour
                 isDespawning = true;
         }
 
-        if (myTransform.position.y >= 10 && isDespawning)
+        if (myTransform.position.y >= 14 && isDespawning)
             Destroy(gameObject);
     }
 

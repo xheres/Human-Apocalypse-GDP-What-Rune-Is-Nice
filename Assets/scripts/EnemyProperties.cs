@@ -10,6 +10,7 @@ public class EnemyProperties : MonoBehaviour
     [SerializeField] int shotsPerRound;
     [SerializeField] float interval;
     [SerializeField] float reloadTime;
+    [SerializeField] float initRotation;
 
     float prevZRotation;
 
@@ -53,6 +54,12 @@ public class EnemyProperties : MonoBehaviour
     {
         return prevZRotation;
     }
+
+    public float getInitRotation()
+    {
+        return initRotation;
+    }
+
     public GameObject getMuzzle()
     {
         return muzzle;

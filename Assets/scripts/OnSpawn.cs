@@ -9,6 +9,9 @@ public class OnSpawn : MonoBehaviour
     private Vector2 maxY;
 
     bool hasSpawned = false;
+
+    public delegate void NonStandardMovement();
+    public event NonStandardMovement onSpawnMovement;
 	
     void Start()
     {
@@ -18,10 +21,17 @@ public class OnSpawn : MonoBehaviour
 
 	void Update () 
     {
-        if(!hasSpawned)
+        if (onSpawnMovement == null && !hasSpawned)
+        {
             transform.position = Vector3.Lerp(transform.position, maxY, lerpRate * Time.deltaTime);
 
-        if (transform.position.y <= enemyProp.getSpawnedYPos() + 0.01f)
-            hasSpawned = true;
+            if (transform.position.y <= enemyProp.getSpawnedYPos() + 0.01f)
+                hasSpawned = true;
+        }
+        else if(!hasSpawned)
+        {
+            onSpawnMovement();
+            
+        }
 	}
 }

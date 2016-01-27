@@ -15,8 +15,6 @@ public class Spawner_Script : MonoBehaviour
 
     [SerializeField] GameObject[] enemyGroup;
 
-    
-
     void Start()
     {
         distanceController = GameObject.Find("_DistanceController").GetComponent<DistanceController>();
@@ -33,7 +31,7 @@ public class Spawner_Script : MonoBehaviour
                 {
                     enemyOnField = true;
                     yield return new WaitForSeconds(0.5f);
-                    SetEnemyGroup(curStage);
+                    // SetEnemyGroup(curStage);
                     createdGroup = Instantiate(enemyGroup[0], transform.position, Quaternion.identity) as GameObject;
                 }
 

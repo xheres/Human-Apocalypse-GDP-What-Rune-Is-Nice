@@ -8,8 +8,9 @@ public class muzzle_generic : MonoBehaviour
     GameObject createdProjectile;
     Quaternion rotation;
 
+    Vector3 initialOffset;
+
     [SerializeField] int projectilesPerShot = 1;
-    [SerializeField] float initRotation;
     [SerializeField] Vector3 projectileOffset;
 
     int shotsPerRound;
@@ -31,8 +32,8 @@ public class muzzle_generic : MonoBehaviour
         prevZRotation = enemyProp.getPrevZRotation();
         if(prevZRotation == 0)
         {
-            rotation = Quaternion.Euler(new Vector3(0, 0, initRotation));
-            zRotation = initRotation;
+            rotation = Quaternion.Euler(new Vector3(0, 0, enemyProp.getInitRotation()));
+            zRotation = enemyProp.getInitRotation();
         }
         else
         {
@@ -43,7 +44,7 @@ public class muzzle_generic : MonoBehaviour
 
         interval = enemyProp.getInterval();
 
-        projectileOffset += transform.position;
+        initialOffset = projectileOffset;
 
         StartCoroutine(ShootProjectile());
     }
@@ -54,6 +55,9 @@ public class muzzle_generic : MonoBehaviour
         {
             if (shotsPerRound > 0 || shotsPerRound == -99)
             {
+                projectileOffset = initialOffset;
+                projectileOffset += transform.position;
+
                 //shotFired = true;
                 for (int i = 0; i < projectilesPerShot; i++)
                 {
@@ -119,7 +123,7 @@ public class muzzle_generic : MonoBehaviour
 
     public float getInitRotation()
     {
-        return initRotation;
+        return enemyProp.getInitRotation();
     }
 
     public int getProjectilesPerShot()
