@@ -4,8 +4,8 @@ using System.Collections;
 
 public class DistanceController : MonoBehaviour 
 {
-    int stage;
-    float dist = 0.0f;
+    static int stage;
+    static float dist = 0.0f;
     bool isBossStage = false;
     float speed;
 
