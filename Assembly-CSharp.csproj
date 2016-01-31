@@ -38,10 +38,10 @@
 	<Reference Include="System.Core" />
 	<Reference Include="System.Xml.Linq" />
 	<Reference Include="UnityEngine">
-	  <HintPath>D:/Unity/Editor/Data/Managed/UnityEngine.dll</HintPath>
+	  <HintPath>C:/Program Files/Unity/Editor/Data/Managed/UnityEngine.dll</HintPath>
 	</Reference>
 	<Reference Include="UnityEditor">
-	  <HintPath>D:/Unity/Editor/Data/Managed/UnityEditor.dll</HintPath>
+	  <HintPath>C:/Program Files/Unity/Editor/Data/Managed/UnityEditor.dll</HintPath>
 	</Reference>
   </ItemGroup>
   <ItemGroup>
@@ -64,11 +64,6 @@
      <Compile Include="Assets\scripts\Muzzles\muzzle_generic.cs" />
      <Compile Include="Assets\scripts\PatternCreator\pc_cornerSpread.cs" />
      <Compile Include="Assets\scripts\Player\PlayerController.cs" />
-     <Compile Include="Assets\scripts\Projectiles\Projectile Extension\pExt_createAlive.cs" />
-     <Compile Include="Assets\scripts\Projectiles\Projectile Extension\pExt_createTimeout.cs" />
-     <Compile Include="Assets\scripts\Projectiles\_Old\small_whitered_aimed.cs" />
-     <Compile Include="Assets\scripts\Projectiles\_Old\small_whitered_sharp.cs" />
-     <Compile Include="Assets\scripts\Projectiles\projectile_linear.cs" />
      <Compile Include="Assets\scripts\Spawner\Spawner_Script.cs" />
      <Compile Include="Assets\scripts\UI\FadeController.cs" />
      <Compile Include="Assets\scripts\UI\FadeInOut.cs" />
@@ -118,17 +113,28 @@
      <Compile Include="Assets\scripts\_Old\FSM\Satellite\FSM\SatelliteStateWarning.cs" />
      <Compile Include="Assets\scripts\_Old\FSM\Satellite\SatelliteController.cs" />
      <Compile Include="Assets\scripts\_Old\FSM\Satellite\laserProjectile.cs" />
+     <Compile Include="Assets\scripts\projectiles\Projectile Extension\pExt_createAlive.cs" />
+     <Compile Include="Assets\scripts\projectiles\Projectile Extension\pExt_createTimeout.cs" />
+     <Compile Include="Assets\scripts\projectiles\_Old\small_whitered_aimed.cs" />
+     <Compile Include="Assets\scripts\projectiles\_Old\small_whitered_sharp.cs" />
+     <Compile Include="Assets\scripts\projectiles\projectile_linear.cs" />
+ <Reference Include="UnityEngine.Advertisements">
+ <HintPath>C:/Program Files/Unity/Editor/Data/UnityExtensions/Unity/Advertisements/UnityEngine.Advertisements.dll</HintPath>
+ </Reference>
  <Reference Include="UnityEngine.UI">
- <HintPath>D:/Unity/Editor/Data/UnityExtensions/Unity/GUISystem/UnityEngine.UI.dll</HintPath>
+ <HintPath>C:/Program Files/Unity/Editor/Data/UnityExtensions/Unity/GUISystem/UnityEngine.UI.dll</HintPath>
  </Reference>
  <Reference Include="UnityEngine.Networking">
- <HintPath>D:/Unity/Editor/Data/UnityExtensions/Unity/Networking/UnityEngine.Networking.dll</HintPath>
+ <HintPath>C:/Program Files/Unity/Editor/Data/UnityExtensions/Unity/Networking/UnityEngine.Networking.dll</HintPath>
+ </Reference>
+ <Reference Include="UnityEngine.Analytics">
+ <HintPath>C:/Program Files/Unity/Editor/Data/UnityExtensions/Unity/UnityAnalytics/UnityEngine.Analytics.dll</HintPath>
  </Reference>
  <Reference Include="Mono.Cecil">
- <HintPath>D:/Unity/Editor/Data/Managed/Mono.Cecil.dll</HintPath>
+ <HintPath>C:/Program Files/Unity/Editor/Data/Managed/Mono.Cecil.dll</HintPath>
  </Reference>
  <Reference Include="UnityEditor.iOS.Extensions.Xcode">
- <HintPath>D:/Unity/Editor/Data/PlaybackEngines/iOSSupport/UnityEditor.iOS.Extensions.Xcode.dll</HintPath>
+ <HintPath>C:/Program Files/Unity/Editor/Data/PlaybackEngines/iOSSupport/UnityEditor.iOS.Extensions.Xcode.dll</HintPath>
  </Reference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
