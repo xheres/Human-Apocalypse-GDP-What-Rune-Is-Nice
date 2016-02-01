@@ -9,6 +9,7 @@ public class Spawner_Script : MonoBehaviour
     int prevIndex;
     bool enemyOnField;
     int stageOffset;
+    int rand;
 
     GameObject createdGroup;
     DistanceController distanceController;
@@ -32,7 +33,8 @@ public class Spawner_Script : MonoBehaviour
                     enemyOnField = true;
                     yield return new WaitForSeconds(0.5f);
                     // SetEnemyGroup(curStage);
-                    createdGroup = Instantiate(enemyGroup[0], transform.position, Quaternion.identity) as GameObject;
+                    rand = Random.Range(0, enemyGroup.Length);
+                    createdGroup = Instantiate(enemyGroup[rand], transform.position, Quaternion.identity) as GameObject;
                 }
 
                 if (GameObject.FindWithTag("Enemy") == null)
