@@ -165,4 +165,9 @@ public class muzzle_generic : MonoBehaviour
     {
         projectileOffset = offset;
     }
+
+    public Vector3 getOffset()
+    {
+        return projectileOffset;
+    }
 }
