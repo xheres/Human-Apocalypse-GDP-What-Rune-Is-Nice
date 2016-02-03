@@ -1,6 +1,6 @@
 fileFormatVersion: 2
 guid: f1b41ca41890eed4fb9b1c5cc12db68c
-timeCreated: 1453860856
+timeCreated: 1454486197
 licenseType: Free
 TextureImporter:
   fileIDToRecycleName:
@@ -15,6 +15,49 @@ TextureImporter:
     21300016: zombie sprite sheet_25
     21300018: zombie 5-1
     21300020: zombie 5-2
+    21300022: zombie sprite sheet_0
+    21300024: zombie sprite sheet_1
+    21300026: zombie sprite sheet_2
+    21300028: zombie sprite sheet_3
+    21300030: zombie sprite sheet_4
+    21300032: zombie sprite sheet_5
+    21300034: zombie sprite sheet_6
+    21300036: zombie sprite sheet_7
+    21300038: zombie sprite sheet_8
+    21300040: zombie sprite sheet_9
+    21300042: zombie sprite sheet_10
+    21300044: zombie sprite sheet_11
+    21300046: zombie sprite sheet_12
+    21300048: zombie sprite sheet_13
+    21300050: zombie sprite sheet_14
+    21300052: zombie sprite sheet_15
+    21300054: zombie sprite sheet_16
+    21300056: zombie sprite sheet_17
+    21300058: zombie sprite sheet_18
+    21300060: zombie sprite sheet_19
+    21300062: zombie sprite sheet_20
+    21300064: zombie sprite sheet_21
+    21300066: zombie sprite sheet_22
+    21300068: zombie sprite sheet_23
+    21300070: zombie sprite sheet_24
+    21300072: zombie sprite sheet_26
+    21300074: zombie sprite sheet_27
+    21300076: zombie sprite sheet_28
+    21300078: zombie sprite sheet_29
+    21300080: zombie sprite sheet_30
+    21300082: zombie sprite sheet_31
+    21300084: zombie sprite sheet_32
+    21300086: zombie sprite sheet_33
+    21300088: zombie sprite sheet_34
+    21300090: zombie sprite sheet_35
+    21300092: zombie sprite sheet_36
+    21300094: zombie sprite sheet_37
+    21300096: zombie sprite sheet_38
+    21300098: zombie sprite sheet_39
+    21300100: zombie sprite sheet_40
+    21300102: zombie sprite sheet_41
+    21300104: zombie sprite sheet_42
+    21300106: zombie sprite sheet_43
   serializedVersion: 2
   mipmaps:
     mipMapMode: 0
@@ -61,7 +104,7 @@ TextureImporter:
   buildTargetSettings: []
   spriteSheet:
     sprites:
-    - name: zombie 1-1
+    - name: zombie sprite sheet_0
       rect:
         serializedVersion: 2
         x: 4
@@ -71,7 +114,17 @@ TextureImporter:
       alignment: 0
       pivot: {x: .5, y: .5}
       border: {x: 0, y: 0, z: 0, w: 0}
-    - name: zombie 1-2
+    - name: zombie sprite sheet_1
+      rect:
+        serializedVersion: 2
+        x: 32
+        y: 0
+        width: 27
+        height: 256
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: zombie sprite sheet_2
       rect:
         serializedVersion: 2
         x: 68
@@ -81,7 +134,7 @@ TextureImporter:
       alignment: 0
       pivot: {x: .5, y: .5}
       border: {x: 0, y: 0, z: 0, w: 0}
-    - name: zombie 2-1
+    - name: zombie sprite sheet_3
       rect:
         serializedVersion: 2
         x: 99
@@ -91,7 +144,17 @@ TextureImporter:
       alignment: 0
       pivot: {x: .5, y: .5}
       border: {x: 0, y: 0, z: 0, w: 0}
-    - name: zombie 2-2
+    - name: zombie sprite sheet_4
+      rect:
+        serializedVersion: 2
+        x: 128
+        y: 128
+        width: 28
+        height: 128
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: zombie sprite sheet_5
       rect:
         serializedVersion: 2
         x: 164
@@ -101,7 +164,7 @@ TextureImporter:
       alignment: 0
       pivot: {x: .5, y: .5}
       border: {x: 0, y: 0, z: 0, w: 0}
-    - name: zombie 3-1
+    - name: zombie sprite sheet_6
       rect:
         serializedVersion: 2
         x: 195
@@ -111,7 +174,17 @@ TextureImporter:
       alignment: 0
       pivot: {x: .5, y: .5}
       border: {x: 0, y: 0, z: 0, w: 0}
-    - name: zombie 3-2
+    - name: zombie sprite sheet_7
+      rect:
+        serializedVersion: 2
+        x: 224
+        y: 128
+        width: 27
+        height: 128
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: zombie sprite sheet_8
       rect:
         serializedVersion: 2
         x: 259
@@ -121,7 +194,7 @@ TextureImporter:
       alignment: 0
       pivot: {x: .5, y: .5}
       border: {x: 0, y: 0, z: 0, w: 0}
-    - name: zombie 4-1
+    - name: zombie sprite sheet_9
       rect:
         serializedVersion: 2
         x: 292
@@ -131,7 +204,17 @@ TextureImporter:
       alignment: 0
       pivot: {x: .5, y: .5}
       border: {x: 0, y: 0, z: 0, w: 0}
-    - name: zombie 4-2
+    - name: zombie sprite sheet_10
+      rect:
+        serializedVersion: 2
+        x: 321
+        y: 224
+        width: 27
+        height: 31
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: zombie sprite sheet_11
       rect:
         serializedVersion: 2
         x: 356
@@ -141,7 +224,247 @@ TextureImporter:
       alignment: 0
       pivot: {x: .5, y: .5}
       border: {x: 0, y: 0, z: 0, w: 0}
-    - name: zombie 5-1
+    - name: zombie sprite sheet_12
+      rect:
+        serializedVersion: 2
+        x: 5
+        y: 192
+        width: 19
+        height: 31
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: zombie sprite sheet_13
+      rect:
+        serializedVersion: 2
+        x: 68
+        y: 192
+        width: 20
+        height: 31
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: zombie sprite sheet_14
+      rect:
+        serializedVersion: 2
+        x: 100
+        y: 192
+        width: 21
+        height: 31
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: zombie sprite sheet_15
+      rect:
+        serializedVersion: 2
+        x: 164
+        y: 192
+        width: 21
+        height: 31
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: zombie sprite sheet_16
+      rect:
+        serializedVersion: 2
+        x: 195
+        y: 192
+        width: 22
+        height: 31
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: zombie sprite sheet_17
+      rect:
+        serializedVersion: 2
+        x: 259
+        y: 192
+        width: 22
+        height: 31
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: zombie sprite sheet_18
+      rect:
+        serializedVersion: 2
+        x: 291
+        y: 192
+        width: 22
+        height: 31
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: zombie sprite sheet_19
+      rect:
+        serializedVersion: 2
+        x: 355
+        y: 192
+        width: 22
+        height: 31
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: zombie sprite sheet_20
+      rect:
+        serializedVersion: 2
+        x: 6
+        y: 160
+        width: 19
+        height: 31
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: zombie sprite sheet_21
+      rect:
+        serializedVersion: 2
+        x: 70
+        y: 160
+        width: 20
+        height: 31
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: zombie sprite sheet_22
+      rect:
+        serializedVersion: 2
+        x: 101
+        y: 160
+        width: 21
+        height: 31
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: zombie sprite sheet_23
+      rect:
+        serializedVersion: 2
+        x: 165
+        y: 160
+        width: 21
+        height: 31
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: zombie sprite sheet_24
+      rect:
+        serializedVersion: 2
+        x: 197
+        y: 160
+        width: 22
+        height: 31
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: zombie sprite sheet_25
+      rect:
+        serializedVersion: 2
+        x: 261
+        y: 160
+        width: 22
+        height: 31
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: zombie sprite sheet_26
+      rect:
+        serializedVersion: 2
+        x: 293
+        y: 160
+        width: 22
+        height: 31
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: zombie sprite sheet_27
+      rect:
+        serializedVersion: 2
+        x: 357
+        y: 160
+        width: 22
+        height: 31
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: zombie sprite sheet_28
+      rect:
+        serializedVersion: 2
+        x: 4
+        y: 128
+        width: 23
+        height: 31
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: zombie sprite sheet_29
+      rect:
+        serializedVersion: 2
+        x: 68
+        y: 128
+        width: 23
+        height: 31
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: zombie sprite sheet_30
+      rect:
+        serializedVersion: 2
+        x: 100
+        y: 128
+        width: 23
+        height: 31
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: zombie sprite sheet_31
+      rect:
+        serializedVersion: 2
+        x: 164
+        y: 128
+        width: 23
+        height: 31
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: zombie sprite sheet_32
+      rect:
+        serializedVersion: 2
+        x: 196
+        y: 128
+        width: 23
+        height: 31
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: zombie sprite sheet_33
+      rect:
+        serializedVersion: 2
+        x: 260
+        y: 128
+        width: 23
+        height: 31
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: zombie sprite sheet_34
+      rect:
+        serializedVersion: 2
+        x: 292
+        y: 128
+        width: 23
+        height: 31
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: zombie sprite sheet_35
+      rect:
+        serializedVersion: 2
+        x: 356
+        y: 128
+        width: 23
+        height: 31
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: zombie sprite sheet_36
       rect:
         serializedVersion: 2
         x: 4
@@ -151,12 +474,72 @@ TextureImporter:
       alignment: 0
       pivot: {x: .5, y: .5}
       border: {x: 0, y: 0, z: 0, w: 0}
-    - name: zombie 5-2
+    - name: zombie sprite sheet_37
       rect:
         serializedVersion: 2
         x: 68
         y: 96
         width: 24
+        height: 31
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: zombie sprite sheet_38
+      rect:
+        serializedVersion: 2
+        x: 4
+        y: 64
+        width: 22
+        height: 31
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: zombie sprite sheet_39
+      rect:
+        serializedVersion: 2
+        x: 68
+        y: 64
+        width: 22
+        height: 31
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: zombie sprite sheet_40
+      rect:
+        serializedVersion: 2
+        x: 4
+        y: 32
+        width: 22
+        height: 31
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: zombie sprite sheet_41
+      rect:
+        serializedVersion: 2
+        x: 68
+        y: 32
+        width: 22
+        height: 31
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: zombie sprite sheet_42
+      rect:
+        serializedVersion: 2
+        x: 4
+        y: 0
+        width: 23
+        height: 31
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: zombie sprite sheet_43
+      rect:
+        serializedVersion: 2
+        x: 68
+        y: 0
+        width: 23
         height: 31
       alignment: 0
       pivot: {x: .5, y: .5}
