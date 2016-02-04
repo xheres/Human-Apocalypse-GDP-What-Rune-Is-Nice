@@ -40,12 +40,11 @@ public class GameController : MonoBehaviour
 
     public void GameEnd()
     {
-        fadeController.setFadeDuration(4.0f);
+        fadeController.setFadeDuration(2.0f);
         fadeController.StartCoroutine(fadeController.FadeOut());
-        
-        fadeController.setFadeDuration(4.0f);
-        fadeController.StartCoroutine(fadeController.FadeIn());
-        Invoke("callGameOver", 2);
+
+        Invoke("stageStart", 1.0f);
+        Invoke("callGameOver", 1.0f);
 
     }
     void callGameOver()

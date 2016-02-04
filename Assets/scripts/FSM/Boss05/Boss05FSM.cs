@@ -11,11 +11,15 @@ public class Boss05FSM : MonoBehaviour
 
     bool bossSpawned = false;
 
-    int moveIndex;
-    int attackIndex;
+    int moveIndex = 0;
+    int attackIndex = 0;
 
     bool canFire; // Can the boss fire the attack?
     float[] cd = {};
+
+    [SerializeField] float yPos = 6.5f;
+    [SerializeField] Vector2[] wayPoints;
+    [SerializeField] GameObject[] attackSet;
 
     public void ChangeState(Boss05State state)
     {
@@ -77,5 +81,25 @@ public class Boss05FSM : MonoBehaviour
             nextState.Enter();
             bossSpawned = true;
         }
+    }
+
+    public float getYPos()
+    {
+        return yPos;
+    }
+
+    public Transform getTransform()
+    {
+        return transform;
+    }
+
+    public Vector2[] getWaypoints()
+    {
+        return wayPoints;
+    }
+
+    public GameObject getAttack()
+    {
+        return attackSet[attackIndex];
     }
 }

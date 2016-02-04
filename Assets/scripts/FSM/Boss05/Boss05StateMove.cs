@@ -9,7 +9,6 @@ public class Boss05StateMove : Boss05State
 
     Boss05State nextState;
 
-    [SerializeField] Vector2[] wayPoints;
     Transform myTransform;
 
     public Boss05StateMove(Boss05FSM _FSM)
@@ -31,7 +30,7 @@ public class Boss05StateMove : Boss05State
 
     public override void Execute()
     {
-        Vector3.Lerp(myTransform.position, wayPoints[m_Boss05FSM.getMoveIndex()], 15 * Time.deltaTime);
+        Vector3.Lerp(myTransform.position, m_Boss05FSM.getWaypoints()[m_Boss05FSM.getMoveIndex()], 15 * Time.deltaTime);
     }
 
     public override void Exit()

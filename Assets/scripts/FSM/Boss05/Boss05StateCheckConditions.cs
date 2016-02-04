@@ -3,7 +3,7 @@
 using UnityEngine;
 using System.Collections;
 
-public class Boss05StateCheckCondition : Boss05State
+public class Boss05StateCheckConditions : Boss05State
 {
     bool hasEntered = false;
 
@@ -12,7 +12,7 @@ public class Boss05StateCheckCondition : Boss05State
     Transform player;
     int attackOrMove;
 
-    public Boss05StateCheckCondition(Boss05FSM _FSM)
+    public Boss05StateCheckConditions(Boss05FSM _FSM)
     {
         m_Boss05FSM = _FSM;
     }
@@ -30,8 +30,6 @@ public class Boss05StateCheckCondition : Boss05State
     public override void Execute()
     {
         attackOrMove = Random.Range(0, 2);
-
-
 
         if(attackOrMove == 0) //Attack
         {
