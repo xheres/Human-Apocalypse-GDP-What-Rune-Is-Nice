@@ -130,6 +130,8 @@ public class projectile_linear : MonoBehaviour
     {
         if(col.gameObject.tag == "Player")
         {
+            HealthController health = GameObject.Find("HP Bar").GetComponent<HealthController>();
+            health.ReduceHealth();
             Debug.Log("hit"); //Apply Damage
             DeleteProjectile();
         }
