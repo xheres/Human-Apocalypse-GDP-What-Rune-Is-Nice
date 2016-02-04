@@ -19,7 +19,6 @@ public class Boss03Spawn : Boss03State
 	{
 		if (!enteredField)
 		{
-			nextState = new Boss05StateCheckCondition(m_Boss03FSM);
 			enteredField = true;
 		}
 		Execute();
