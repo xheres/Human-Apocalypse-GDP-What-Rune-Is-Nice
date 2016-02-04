@@ -5,7 +5,7 @@ using System.Collections;
 
 public class Boss03FSM : MonoBehaviour 
 {
-	Boss05State nextState;
+	Boss03State nextState;
 	DistanceController distCont;
 	bool bossSpawned = false;
 	int attackId;
@@ -13,7 +13,7 @@ public class Boss03FSM : MonoBehaviour
 	bool canFire;
 	float[] cd = {};
 	
-	public void NextState(Boss05State state)
+	public void NextState(Boss03State state)
 	{
 		nextState = state;
 	}
