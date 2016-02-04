@@ -23,7 +23,7 @@ public class Despawn : MonoBehaviour
     {
         if ( (distanceController.checkBossStage()) || (properties.getAmmo() <= 0 && properties.getAmmo() != -99) )
         {
-            Invoke("Remove", 1);
+            Invoke("Remove", 1.0f);
             if (!isDespawning)
                 isDespawning = true;
         }

@@ -14,6 +14,7 @@ public class GameController : MonoBehaviour
         fadeController = GameObject.Find("Fader").GetComponent<FadeInOut>();
 
         Invoke("stageStart", 0.25f);
+        Invoke("startGame", 3.0f);
     }
 
     void startGame()
@@ -25,14 +26,13 @@ public class GameController : MonoBehaviour
     public void stageStart()
     {
         // - Show Stage #
-        fadeController.setFadeDuration(20.0f);
-        fadeController.StartCoroutine(fadeController.FadeIn());
-        Invoke("startGame", 3.0f);
+        fadeController.setFadeDuration(2.0f);
+        fadeController.StartCoroutine(fadeController.FadeIn());   
     }
 
     public void StageEnd()
     {
-        fadeController.setFadeDuration(30.0f);
+        fadeController.setFadeDuration(2.0f);
         fadeController.StartCoroutine(fadeController.FadeOut());
     }
 }
