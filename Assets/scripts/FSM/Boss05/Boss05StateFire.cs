@@ -9,7 +9,6 @@ public class Boss05StateFire : Boss05State
 
     Boss05State nextState;
 
-    Boss05StateSwitchAttack switchAttackScript;
     GameObject muzzleCreator;
     Transform myTransform;
 
@@ -22,10 +21,9 @@ public class Boss05StateFire : Boss05State
     {
         if(!hasEntered)
         {
-            switchAttackScript = m_Boss05FSM.GetComponent<Boss05StateSwitchAttack>();
             myTransform = m_Boss05FSM.transform;
 
-            muzzleCreator = switchAttackScript.getAttack();
+            muzzleCreator = m_Boss05FSM.getAttack();
         }
 
         Execute();

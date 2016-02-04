@@ -7,8 +7,6 @@ public class Boss05StateSpawn : Boss05State
 {
     bool hasEntered = false;
 
-    [SerializeField] float yPos = 6.5f;
-    [SerializeField] GameObject Boss05;
     Boss05State nextState;
 
     public Boss05StateSpawn(Boss05FSM _FSM)
@@ -20,7 +18,7 @@ public class Boss05StateSpawn : Boss05State
     {
         if (!hasEntered)
         {
-            nextState = new Boss05StateCheckCondition(m_Boss05FSM);
+            nextState = new Boss05StateCheckConditions(m_Boss05FSM);
 
             hasEntered = true;
         }
@@ -30,7 +28,7 @@ public class Boss05StateSpawn : Boss05State
 
     public override void Execute()
     {
-        MonoBehaviour.Instantiate(Boss05, new Vector3(0, yPos, 0), Quaternion.identity);
+        m_Boss05FSM.getTransform().position = new Vector3(0, m_Boss05FSM.getYPos(), 0);
         // Nothing to do after spawning, exit to next state
         Exit();
     }
