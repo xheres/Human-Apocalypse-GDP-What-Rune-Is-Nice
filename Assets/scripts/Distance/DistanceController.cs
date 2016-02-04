@@ -109,4 +109,19 @@ public class DistanceController : MonoBehaviour
     {
         return stage;
     }
+
+    public bool GetChangeStageStatus()
+    {
+        return isChangingStage;
+    }
+
+    public float GetCurDist()
+    {
+        return dist;
+    }
+
+    public float GetEndDist()
+    {
+        return (maxDist + bossDist) * (stage + 1);
+    }
 }
