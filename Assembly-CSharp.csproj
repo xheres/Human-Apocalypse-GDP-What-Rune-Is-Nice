@@ -76,6 +76,9 @@
      <Compile Include="Assets\scripts\Spawner\Spawner_Script.cs" />
      <Compile Include="Assets\scripts\UI\FadeController.cs" />
      <Compile Include="Assets\scripts\UI\FadeInOut.cs" />
+     <Compile Include="Assets\scripts\UI\GameOver.cs" />
+     <Compile Include="Assets\scripts\UI\GameOverButtonHandler.cs" />
+     <Compile Include="Assets\scripts\UI\GameOverMenuController.cs" />
      <Compile Include="Assets\scripts\UI_MainMenu\ButtonHandler.cs" />
      <Compile Include="Assets\scripts\UI_MainMenu\MenuController.cs" />
      <Compile Include="Assets\scripts\_Old\Debug\DummyMovement.cs" />
