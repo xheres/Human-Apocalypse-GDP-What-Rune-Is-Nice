@@ -2,14 +2,9 @@
 using UnityEngine;
 using System.Collections;
 
-public class Boss01StateSpawn : Boss01State {
+public class BossStateDeleteMuzzle : BossState {
     bool hasEntered = false;
-    Boss01FSM Boss;
-    GameObject Boss01;
-    [SerializeField]
-    float y = 6.5f;
-
-    public Boss01StateSpawn(Boss01FSM _FSM)
+    public BossStateDeleteMuzzle(BossFSM _FSM)
 	{
 		m_BossFSM = _FSM;
 	}
@@ -18,9 +13,6 @@ public class Boss01StateSpawn : Boss01State {
     {
         if (hasEntered == false)
         {
-            Boss = GameObject.Find("Boss01").GetComponent<Boss01FSM>();
-            Boss01 = Boss.Boss01;
-
             Execute();
             hasEntered = true;
         }
@@ -28,11 +20,7 @@ public class Boss01StateSpawn : Boss01State {
 
     public override void Execute()
     {
-        if (Boss.bossSpawned == false)
-        {
-           // MonoBehaviour.Instantiate(Boss01, new Vector3(0, y, 0), Quaternion.identity);
-            Boss.bossSpawned = true;
-        }
+        Debug.Log("Delete Muzzle");
         Exit();
     }
 

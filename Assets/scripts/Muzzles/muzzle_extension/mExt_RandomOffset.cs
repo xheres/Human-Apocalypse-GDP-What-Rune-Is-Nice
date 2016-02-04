@@ -36,6 +36,7 @@ public class mExt_RandomOffset : MonoBehaviour {
         {
             muzzle.setOffset(new Vector3(offset.x + rand + randDeci, offset.y));
         }
+        Debug.Log(offset);
     }
 }
 

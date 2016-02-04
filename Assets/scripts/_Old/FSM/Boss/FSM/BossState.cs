@@ -2,10 +2,10 @@
 using UnityEngine;
 using System.Collections;
 
-public abstract class Boss01State
+public abstract class BossState
 {
 
-    protected Boss01FSM m_BossFSM;
+    protected BossFSM m_BossFSM;
 
 
     public abstract void Enter();
