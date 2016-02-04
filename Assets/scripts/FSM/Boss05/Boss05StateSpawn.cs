@@ -6,10 +6,12 @@ using System.Collections;
 public class Boss05StateSpawn : Boss05State
 {
     bool hasEntered = false;
+    DistanceController distanceController;
 
     [SerializeField] float yPos = 6.5f;
     [SerializeField] GameObject Boss05;
     Boss05State nextState;
+    
 
     public Boss05StateSpawn(Boss05FSM _FSM)
     {
@@ -21,7 +23,7 @@ public class Boss05StateSpawn : Boss05State
         if (!hasEntered)
         {
             nextState = new Boss05StateCheckCondition(m_Boss05FSM);
-
+           
             hasEntered = true;
         }
 
@@ -30,7 +32,10 @@ public class Boss05StateSpawn : Boss05State
 
     public override void Execute()
     {
-        MonoBehaviour.Instantiate(Boss05, new Vector3(0, yPos, 0), Quaternion.identity);
+       // if (distanceController.bossSpawned = false)
+        {
+            MonoBehaviour.Instantiate(Boss05, new Vector3(0, yPos, 0), Quaternion.identity);
+        }
         // Nothing to do after spawning, exit to next state
         Exit();
     }
